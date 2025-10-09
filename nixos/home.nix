@@ -22,12 +22,6 @@
   home.file.".themes".source = ../themes;
   home.file.".zprofile".source = ../zsh/.zprofile;
   home.file.".zshenv".text = ''
-  # Only source Home Manager session variables once
-  if [[ -z "$__HM_ZSH_SESS_VARS_SOURCED" ]]; then
-    . "/etc/profiles/per-user/${config.home.username}/etc/profile.d/hm-session-vars.sh"
-    export __HM_ZSH_SESS_VARS_SOURCED=1
-  fi
-
   # Core theming
   export GTK_THEME=Adwaita-Mono
   export GTK_ICON_THEME="Papirus-Dark"
