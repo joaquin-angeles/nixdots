@@ -18,8 +18,6 @@
   home.file.".config/swayosd".source = ../swayosd;
   home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
-  home.file.".icons".source = ../icons;
-  home.file.".themes".source = ../themes;
   home.file.".zprofile".source = ../zsh/.zprofile;
 
   # FZF
@@ -50,6 +48,7 @@
     mako
     neovim
     ripgrep
+    stow
     unstable.impala
     unstable.swayosd
     unstable.wiremix
