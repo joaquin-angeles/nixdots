@@ -20,11 +20,13 @@
   home.file.".config/waybar".source = ../waybar;
   home.file.".zprofile".source = ../zsh/.zprofile;
 
+
   # FZF
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
   };
+
 
   # Packages
   home.packages = with pkgs; [

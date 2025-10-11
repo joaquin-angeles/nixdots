@@ -67,6 +67,9 @@
     };
   };
 
+  # Tumbler
+  services.tumbler.enable = true;
+
   # X.org server
   services.xserver = {
     enable = false;
