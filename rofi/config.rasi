@@ -54,7 +54,7 @@ prompt {
 }
 
 entry {
-    placeholder: "Type to search...";
+    placeholder: "Type to search…";
     placeholder-color: #595959;
     text-color: #dfdfdf;
 }
