@@ -7,7 +7,7 @@
     ./modules/fonts.nix
     ./modules/laptop.nix
     ./modules/nvidia.nix
-    ./modules/system-packages.nix
+    ./modules/packages.nix
     ./modules/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
