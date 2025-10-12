@@ -1,18 +1,18 @@
 {
-    "include": "~/.config/waybar/modules.json",
-    "layer": "top",
-    "position": "top",
-    "height": 26,
-    "spacing": 4,
-    "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
-    ],
-    "modules-right": [
-        "network",
-        "pulseaudio",
-        "battery",
-        "clock",
-        "tray",
-    ],
+  "include": "~/.config/waybar/modules.json",
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "spacing": 4,
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "tray",
+  ],
 }
