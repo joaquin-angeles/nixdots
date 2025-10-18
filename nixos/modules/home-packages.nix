@@ -13,7 +13,6 @@
     fastfetchMinimal
     file-roller
     foot
-    fzf
     grim
     hyprlock
     hyprpicker
