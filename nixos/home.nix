@@ -29,7 +29,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules";
-    GTK_THEME = "Adwaita-Mono";
+    GTK_THEME = "Adwaita-Mono:dark";
     GTK_ICON_THEME = "Papirus-Dark";
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
