@@ -75,9 +75,9 @@
       "nix-shell" = "nix-shell --run $SHELL";
     };
     initContent = ''
-      # Fastfetch
-      if command -v fastfetch >/dev/null 2>&1; then
-        fastfetch
+      # Fetch
+      if command -v nitch >/dev/null 2>&1; then
+        nitch
         echo ""
       fi
 

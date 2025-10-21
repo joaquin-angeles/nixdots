@@ -6,11 +6,9 @@
     bat
     bibata-cursors
     btop
-    celluloid
     chafa
     cliphist
     eza
-    fastfetchMinimal
     file-roller
     foot
     grim
@@ -27,6 +25,7 @@
     libsForQt5.qtstyleplugin-kvantum
     mako
     neovim
+    nitch
     nwg-look
     ripgrep
     stow
