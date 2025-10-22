@@ -4,9 +4,6 @@
   # Packages
   environment.systemPackages = with pkgs; [
     acpi
-    auto-cpufreq
-    tlp
-    upower
   ];
 
   # Power-savers
