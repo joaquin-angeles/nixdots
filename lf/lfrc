@@ -4,7 +4,6 @@ set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 
 # Options
-set drawbox true
 set sixel true
 
 # Custom functions
