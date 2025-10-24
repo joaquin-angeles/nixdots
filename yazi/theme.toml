@@ -1,0 +1,9 @@
+[mgr]
+border_symbol = " "
+
+[filetype]
+rules = [
+  { mime = "inode/directory", fg = "blue", bold = true },
+	{ name = "*", is = "orphan", fg = "red" },
+	{ name = "*", is = "link", fg = "cyan" },
+]

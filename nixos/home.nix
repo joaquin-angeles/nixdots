@@ -75,6 +75,8 @@
       vim = "nvim";
       v = "nvim";
       "nix-shell" = "nix-shell --run $SHELL";
+      yazi = "yzcd";
+      yz = "yzcd";
     };
     initContent = ''
       # Fetch
@@ -121,6 +123,19 @@
             bat --color=always --theme=base16 --style=plain {}
           fi
         ' "$@"
+      }
+
+      # Better yazi
+      yzcd() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+        yazi "$@" --cwd-file="$tmp"
+        if [ -f "$tmp" ]; then
+          dir="$(cat "$tmp")"
+          rm -f "$tmp"
+          if [ -n "$dir" ] && [ -d "$dir" ]; then
+            cd "$dir" || return 1
+          fi
+        fi
       }
 
       # Keybindings

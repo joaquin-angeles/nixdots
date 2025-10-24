@@ -25,7 +25,6 @@
     libsForQt5.qtstyleplugin-kvantum
     mako
     neovim
-    nitch
     nwg-look
     ripgrep
     stow
