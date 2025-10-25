@@ -133,7 +133,7 @@
           dir="$(cat "$tmp")"
           rm -f "$tmp"
           if [ -n "$dir" ] && [ -d "$dir" ]; then
-            cd "$dir" && ls || return 1
+            cd "$dir" || return 1
           fi
         fi
       }

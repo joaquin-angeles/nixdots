@@ -49,10 +49,7 @@ window#waybar {
   padding-right: 15pt;
 }
 
-#battery {
-  padding-right: 10pt;
-}
-
 #clock {
+  padding-left: 10pt;
   padding-right: 8pt;
 }

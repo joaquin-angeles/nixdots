@@ -15,3 +15,9 @@ themes/.themes/*
 systemd/user/*
 !systemd/user/
 !systemd/user/battery-alert.*
+
+# Hyprland
+hyprland/*
+!hyprland/modules
+!hyprland/hyprland.conf
+!hyprland/hyprlock.conf
