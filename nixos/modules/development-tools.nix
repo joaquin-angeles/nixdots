@@ -10,7 +10,6 @@
     gcc
     git
     gnumake
-    lf
     libtool
     pkgconf
     python3Full

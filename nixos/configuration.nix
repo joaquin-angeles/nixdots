@@ -32,12 +32,6 @@
     xdgOpenUsePortal = true;
   };
 
-  # Environment
-  environment.shells = with pkgs; [ zsh ];
-
-  # Hyprland
-  programs.hyprland.enable = true;
-
   # Networking options
   networking = {
     hostName = "home";
@@ -48,7 +42,6 @@
     nftables.enable = true;
     nftables.ruleset = ''
       table inet filter {
-
         chain input {
           type filter hook input priority 0; policy drop;
           iifname lo accept
@@ -82,16 +75,6 @@
   services.timesyncd.enable = true;
   time.timeZone = "Asia/Manila";
 
-  # Thunar
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
-  };
-  programs.xfconf.enable = true;
-
   # User configuration
   users.users.joaquin = {
     extraGroups = [ "wheel" ];
@@ -106,10 +89,5 @@
     memoryPercent = 50;
     priority = 50;
     swapDevices = 1;
-  };
-
-  # Zsh
-  programs.zsh = {
-    enable = true;
   };
 }

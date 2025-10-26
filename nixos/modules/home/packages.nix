@@ -36,23 +36,4 @@
     yazi
     zsh-powerlevel10k
   ];
-
-  # FZF
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  # Rofi
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    plugins = [pkgs.rofi-emoji];
-  };
-
-  # Zoxide
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }
