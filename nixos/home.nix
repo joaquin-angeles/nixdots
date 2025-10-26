@@ -22,7 +22,7 @@
   # Modules
   imports = [
     ./modules/home/packages.nix
-    ./modules/environment.nix
+    ./modules/home/environment.nix
     ./modules/home/packages.nix
     ./modules/home/programs/fzf.nix
     ./modules/home/programs/rofi.nix
