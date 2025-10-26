@@ -23,12 +23,12 @@
   imports = [
     ./modules/home/environment.nix
     ./modules/home/packages.nix
-    ./modules/home/programs/fzf.nix
-    ./modules/home/programs/rofi.nix
-    ./modules/home/programs/zoxide.nix
-    ./modules/home/programs/zsh/base.nix
-    ./modules/home/programs/zsh/aliases.nix
-    ./modules/home/programs/zsh/functions.nix
-    ./modules/home/programs/zsh/keybinds.nix
+    ./modules/home/programs/apps/fzf.nix
+    ./modules/home/programs/apps/rofi.nix
+    ./modules/home/programs/apps/zoxide.nix
+    ./modules/home/programs/shell/base.nix
+    ./modules/home/programs/shell/aliases.nix
+    ./modules/home/programs/shell/functions.nix
+    ./modules/home/programs/shell/keybinds.nix
   ];
 }
