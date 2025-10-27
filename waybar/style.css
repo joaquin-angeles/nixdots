@@ -46,10 +46,7 @@ window#waybar {
 
 #pulseaudio {
   font-size: 11.25pt;
-}
-
-#battery {
-  padding-left: 15pt;
+  padding-right: 15pt;
 }
 
 #clock {
