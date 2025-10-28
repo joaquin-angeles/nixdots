@@ -22,10 +22,16 @@
   # Modules
   imports = [
     ./modules/home/environment.nix
+
+    # Packages
     ./modules/home/packages.nix
-    ./modules/home/programs/apps/fzf.nix
     ./modules/home/programs/apps/rofi.nix
+
+    # Shell integrations
+    ./modules/home/programs/apps/fzf.nix
     ./modules/home/programs/apps/zoxide.nix
+
+    # Zsh
     ./modules/home/programs/shell/base.nix
     ./modules/home/programs/shell/aliases.nix
     ./modules/home/programs/shell/functions.nix

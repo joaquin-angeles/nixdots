@@ -34,7 +34,7 @@
     "format-ethernet": "󰈀",
     "tooltip-format": "{essid} ({signalStrength}%)",
     "interface": "wlan0",
-    "on-click": "foot -t=NetworkManager -e impala"
+    "on-click": "foot --title=iwctl -e impala"
   },
 
   "bluetooth": {
@@ -61,7 +61,7 @@
         ""
       ]
     },
-    "on-click": "foot -t=Wiremix -e wiremix",
+    "on-click": "foot --title=Wiremix -e wiremix",
     "tooltip-format": "Playing at {volume}%",
   },
 
