@@ -15,6 +15,7 @@
     hyprlock
     hyprpicker
     hyprshot
+    hyprsunset
     imv
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
