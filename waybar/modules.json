@@ -33,7 +33,6 @@
     "format-disconnected": "󰤭",
     "format-ethernet": "󰈀",
     "tooltip-format": "{essid} ({signalStrength}%)",
-    "interface": "wlan0",
     "on-click": "foot --title=iwctl -e impala"
   },
 
@@ -131,7 +130,7 @@
     "format": "{icon}",
     "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
     "interval": 1,
-    "on-click": "hyprsunset -t 3750",
+    "on-click": "hyprsunset -t 4000",
     "on-scroll-up": "brightnessctl s +5%",
     "on-scroll-down": "brightnessctl s 5%-",
     "tooltip": true,
