@@ -5,7 +5,7 @@
   environment.systemPackages = with pkgs; [
     blueman
     brightnessctl
-    wl-clipboard
+    wl-clipboard-rs
     xdg-user-dirs
     zenity
   ];

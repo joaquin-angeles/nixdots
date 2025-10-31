@@ -6,20 +6,16 @@
     bat
     bibata-cursors
     btop
-    chafa
     cliphist
     eza
     file-roller
     foot
     grim
-    hyprlock
     hyprpicker
-    hyprshot
     hyprsunset
     imv
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
-    lazygit
     libnotify
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
@@ -29,6 +25,8 @@
     nwg-look
     ripgrep
     stow
+    unstable.hyprlock
+    unstable.hyprshot
     unstable.impala
     unstable.swayosd
     unstable.wiremix
