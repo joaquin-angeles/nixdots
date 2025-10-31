@@ -48,6 +48,10 @@
   services.timesyncd.enable = true;
   time.timeZone = "Asia/Manila";
 
+  # sudo-rs
+  security.sudo.enable = false;
+  security.sudo-rs.enable = true;
+
   # User configuration
   users.users.joaquin = {
     extraGroups = [ "wheel" ];
