@@ -5,7 +5,6 @@
   environment.systemPackages = with pkgs; [
     blueman
     brightnessctl
-    inputs.nix-software-center.packages.${system}.nix-software-center
     wl-clipboard
     xdg-user-dirs
     zenity
