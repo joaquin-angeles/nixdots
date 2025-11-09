@@ -7,8 +7,8 @@
     grep = "rg";
     k = "kill";
     lsa = "eza -a";
-    ll = "eza -l";
-    lla = "eza -la";
+    ll = "eza -lh";
+    lla = "eza -lha";
     ls = "eza";
     nv = "nvim";
     "nv-run" = "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia";
