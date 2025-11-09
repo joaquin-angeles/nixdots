@@ -14,9 +14,6 @@
     plugins = [ pkgs.rofi-emoji ];
   };
 
-  # Steam
-  programs.steam.enable = true;
-
   # zoxide
   programs.zoxide = {
     enable = true;
