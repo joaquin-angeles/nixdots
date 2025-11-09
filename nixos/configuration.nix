@@ -9,6 +9,7 @@
     ./modules/nvidia.nix
     ./modules/networking.nix
     ./modules/packages.nix
+    ./modules/programs.nix
     ./modules/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
