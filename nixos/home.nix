@@ -25,16 +25,12 @@
 
     # Packages
     ./modules/home/packages.nix
-    ./modules/home/programs/apps/rofi.nix
-
-    # Shell integrations
-    ./modules/home/programs/apps/fzf.nix
-    ./modules/home/programs/apps/zoxide.nix
+    ./modules/home/programs.nix
 
     # Zsh
-    ./modules/home/programs/shell/base.nix
-    ./modules/home/programs/shell/aliases.nix
-    ./modules/home/programs/shell/functions.nix
-    ./modules/home/programs/shell/keybinds.nix
+    ./modules/home/shell/base.nix
+    ./modules/home/shell/aliases.nix
+    ./modules/home/shell/functions.nix
+    ./modules/home/shell/keybinds.nix
   ];
 }
