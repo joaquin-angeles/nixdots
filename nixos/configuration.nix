@@ -6,10 +6,10 @@
     ./modules/development-tools.nix
     ./modules/hardware/laptop.nix
     ./modules/hardware/nvidia.nix
-    ./modules/networking.nix
     ./modules/packages.nix
     ./modules/programs.nix
-    ./modules/services.nix
+    ./modules/services/networking.nix
+    ./modules/services/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
 
