@@ -4,8 +4,8 @@
   # Modules
   imports = [
     ./modules/development-tools.nix
-    ./modules/laptop.nix
-    ./modules/nvidia.nix
+    ./modules/hardware/laptop.nix
+    ./modules/hardware/nvidia.nix
     ./modules/networking.nix
     ./modules/packages.nix
     ./modules/programs.nix
