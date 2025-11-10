@@ -4,7 +4,6 @@
   # Modules
   imports = [
     ./modules/development-tools.nix
-    ./modules/fonts.nix
     ./modules/laptop.nix
     ./modules/nvidia.nix
     ./modules/networking.nix
