@@ -30,7 +30,7 @@ return {
         return
       end
 
-      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#f7ca88" })
+      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#859ba2" })
 
       dashboard.section.header.val = {
         "       ████ ██████           █████      ██                     ",
