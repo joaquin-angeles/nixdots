@@ -43,8 +43,8 @@ window#waybar {
 
 /* PulseAudio module */
 #pulseaudio {
-  font-size: 11.5pt;
-  margin-top: 1.5pt;
+  font-size: 11.25pt;
+  margin-top: 2pt;
   margin-right: 17.5pt;
 }
 
