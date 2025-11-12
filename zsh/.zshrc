@@ -1,8 +1,3 @@
-if command -v fastfetch >/dev/null 2>&1; then
-  fastfetch
-  echo ''
-fi
-
 # Unbinding
 stty intr '^G'
 
@@ -11,6 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # Autosuggestions
+source ~/.p10k/powerlevel10k.zsh-theme # P10K
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Syntax highlighting
 
 # Shell integrations
 eval "$(fzf --zsh)"

@@ -1,5 +1,4 @@
 [mgr]
 ratio = [1, 4, 3]
 title_format = "{cwd}"
-linemode = "size"
 show_symlink = false
