@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [
+  home.packages = with pkgs; [
     inter
     nerd-fonts.jetbrains-mono
     nerd-fonts.meslo-lg
@@ -15,7 +15,7 @@
   fonts.fontconfig.defaultFonts = {
     emoji = [ "Noto Color Emoji" ];
     monospace = [ "JetBrainsMono Nerd Font Mono" ];
-    sanSerif = [ "Inter" ];
+    sansSerif = [ "Inter" ];
     serif = [ "Times New Roman" ];
   };
 }
