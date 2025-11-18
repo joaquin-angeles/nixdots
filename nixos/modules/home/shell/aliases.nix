@@ -15,7 +15,6 @@
     v = "nvim";
     vim = "nvim";
     "nix-shell" = "nix-shell --run $SHELL";
-    yazi = "yzcd";
-    yz = "yzcd";
+    yazi = "yz";
   };
 }

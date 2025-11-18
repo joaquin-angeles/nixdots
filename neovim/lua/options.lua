@@ -8,8 +8,7 @@ require "nvchad.options"
 -- Transparent background
 vim.cmd [[
   hi Normal guibg=NONE ctermbg=NONE
-  hi NonText guibg=NONE ctermbg=NONE
-  hi BufferLineBufferSelected guibg=NONE ctermbg=NONE
+  hi NormalFloat guibg=NONE ctermbg=NONE
 ]]
 
 -- Line numbers

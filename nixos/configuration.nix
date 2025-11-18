@@ -52,7 +52,7 @@
   system.stateVersion = "25.05";
 
   # Timezone
-  services.timesyncd.enable = true;
+  services.timesyncd.enable = false;
   time.timeZone = "Asia/Manila";
 
   # sudo-rs

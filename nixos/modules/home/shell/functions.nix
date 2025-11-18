@@ -31,7 +31,7 @@
     }
 
     # Better yazi
-    yzcd() {
+    yz() {
       local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
       yazi "$@" --cwd-file="$tmp"
       if [ -f "$tmp" ]; then

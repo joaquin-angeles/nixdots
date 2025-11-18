@@ -14,8 +14,7 @@
     ./modules/home/fonts.nix # Fonts
 
     # Packages
-    ./modules/home/apps/packages.nix
-    ./modules/home/apps/programs.nix
+    ./modules/home/apps/*.nix
 
     # Zsh
     ./modules/home/shell/base.nix

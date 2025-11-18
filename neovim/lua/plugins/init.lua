@@ -30,7 +30,7 @@ return {
         return
       end
 
-      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#859ba2" })
+      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#5f705f" })
 
       dashboard.section.header.val = {
         "       ████ ██████           █████      ██                     ",
@@ -45,7 +45,7 @@ return {
 
       dashboard.section.header.opts.hl = "AlphaHeader"
 
-      vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#5f5f5f" })
+      vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#505050" })
       dashboard.section.buttons.val = {
         (function()
           local b = dashboard.button("f", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>")
