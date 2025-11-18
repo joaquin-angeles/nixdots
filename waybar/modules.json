@@ -87,9 +87,9 @@
   },
 
   "clock": {
-    "format": "{:%a %H:%M}",
+    "format": "{:%H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%b %d, %Y}",
+    "tooltip-format": "{:%b %d, %Y on a %A}",
     "interval": 1,
   },
 
