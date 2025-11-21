@@ -31,10 +31,10 @@
     unstable.impala
     unstable.swayosd
     unstable.wiremix
-    tmux
     waybar
     wbg
     yazi
+    zellij
     zsh-powerlevel10k
   ];
 }

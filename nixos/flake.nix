@@ -3,15 +3,12 @@
 
   # Repositories
   inputs = {
-    # Main branch
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
     
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Unstable branch
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   # Integrations
@@ -30,7 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.joaquin = import ./home.nix;
-            home-manager.backupFileExtension = "backup";
+            home-manager.backupFileExtension = "bak";
           }
 
           # Overlays

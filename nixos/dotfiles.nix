@@ -10,7 +10,7 @@
   home.file.".config/rofi".source = ../rofi;
   home.file.".config/Kvantum".source = ../kvantum;
   home.file.".config/swayosd".source = ../swayosd;
-  home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
+  home.file.".config/zellij".source = ../zellij;
   home.file.".zprofile".source = ../zsh/.zprofile;
 }
