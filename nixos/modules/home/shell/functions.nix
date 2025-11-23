@@ -23,7 +23,7 @@
     fzf() {
       command fzf --preview '
         if [ -d {} ]; then
-          eza -lh --color=always {} || ls -lh {}
+          eza --icons -lh --color=always {} || ls -lh {}
         else
           bat --color=always --theme=base16 --style=plain --paging=never {}
         fi
