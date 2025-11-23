@@ -7,12 +7,6 @@ keybinds clear-defaults=true {
   locked {
     bind "Ctrl Space" { SwitchToMode "normal"; }
   }
-  shared_among "normal" "locked" "pane" "scroll" "resize" {
-    bind "Ctrl t" { SwitchToMode "tab"; }
-  }
-  shared_among "normal" "locked" "pane" "tab" "resize" {
-    bind "Ctrl s" { SwitchToMode "scroll"; }
-  }
   pane {
     bind "Left" { MoveFocus "left"; }
     bind "Down" { MoveFocus "down"; }
@@ -159,11 +153,8 @@ keybinds clear-defaults=true {
     bind "Alt n" { NewPane; }
     bind "Alt o" { MoveTab "right"; }
   }
-  shared_among "normal" "locked" "tab" "resize" {
-    bind "Ctrl p" { SwitchToMode "pane"; }
-  }
   shared_except "locked" "renametab" "renamepane" {
-    bind "Ctrl g" { SwitchToMode "locked"; }
+    bind "Ctrl space" { SwitchToMode "locked"; }
     bind "Ctrl q" { Quit; }
   }
   shared_except "locked" "entersearch" {
