@@ -1,6 +1,3 @@
-# Ignore flake
-nixos/flake.lock
-
 # Icon configuration
 themes/.icons/*
 !themes/.icons/Papirus
@@ -10,14 +7,3 @@ themes/.icons/*
 # Theme configuration
 themes/.themes/*
 !themes/.themes/Adwaita-Mono
-
-# SystemD
-systemd/user/*
-!systemd/user/
-!systemd/user/battery-alert.*
-
-# Hyprland
-hyprland/*
-!hyprland/modules
-!hyprland/hyprland.conf
-!hyprland/hyprlock.conf
