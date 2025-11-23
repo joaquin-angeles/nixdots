@@ -2,7 +2,7 @@
 
 {
   # Font packages
-  home.packages = [
+  home.packages = with pkgs; [
     corefonts
     inter
     nerd-fonts.jetbrains-mono
