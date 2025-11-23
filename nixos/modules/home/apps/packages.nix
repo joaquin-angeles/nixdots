@@ -17,6 +17,7 @@
     imv
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
+    lazygit
     libnotify
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
