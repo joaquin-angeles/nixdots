@@ -90,7 +90,7 @@ element alternate.normal {
 }
 
 element selected.normal,
-  element selected.active {
+element selected.active {
   background-color: transparent;
   text-color:       #afafaf;
 }
