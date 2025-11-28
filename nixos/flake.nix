@@ -5,6 +5,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
     
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
@@ -16,6 +17,7 @@
     let
       system = "x86_64-linux";
     in {
+      nixpkgs.config.allowUnfree = true;
       nixosConfigurations.home = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -36,7 +38,6 @@
               (final: prev: {
                 unstable = import unstable {
                   system = pkgs.system;
-                  config.allowUnfree = true;
                 };
               })
             ];

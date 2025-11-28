@@ -21,6 +21,6 @@
     ./modules/home/shell/base.nix
     ./modules/home/shell/aliases.nix
     ./modules/home/shell/functions.nix
-    ./modules/home/shell/keybinds.nix
+    # ./modules/home/shell/keybinds.nix
   ];
 }

@@ -2,6 +2,8 @@
 
 {
   programs.zsh.initContent = ''
+    export TERM=xterm-256color
+
     # Fetch with nitch
     if command -v nitch >/dev/null 2>&1; then
       nitch
@@ -16,7 +18,7 @@
 
     # Better CD
     cd() {
-      z "$@" && eza
+      z "$@" && eza --icons
     }
 
     # Better FZF (faster preview)

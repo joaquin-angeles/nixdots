@@ -67,6 +67,6 @@
     };
   };
 
-  # Tumbler
-  services.tumbler.enable = true;
+  # Zerotier
+  services.zerotierone.enable = true;
 }

@@ -24,7 +24,7 @@
   # Container portals
   xdg.portal = {
     config = {
-      common.default = [ "hyprland" "gtk" ];
+      hyprland.preferred = [ "hyprland" "gtk" ];
     };
     enable = true;
     extraPortals = with pkgs; [
