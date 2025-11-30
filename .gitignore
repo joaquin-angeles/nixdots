@@ -1,9 +1,1 @@
-# Icon configuration
-themes/.icons/*
-!themes/.icons/Papirus
-!themes/.icons/Papirus-Dark
-!themes/.icons/Papirus-Light
-
-# Theme configuration
-themes/.themes/*
-!themes/.themes/Adwaita-Mono
+themes/.icons/default
