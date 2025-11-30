@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  services.flatpak.enable = true;
-
   services.flatpak.packages = [
     "app.zen_browser.zen" # Browser
     "com.github.tchx84.Flatseal" # Flatpak settings
@@ -15,4 +13,4 @@
     "org.gimp.GIMP" # Photo editing
     "org.libreoffice.LibreOffice" # Office suite
   ];
-};
+}

@@ -29,6 +29,7 @@
     ./modules/home/apps/fonts.nix # Fonts
 
     # Flatpaks
+    pkgs.lib.getFlake "nix-flatpak".homeManagerModules.nix-flatpak
     ./modules/home/apps/flatpaks.nix
 
     # Packages

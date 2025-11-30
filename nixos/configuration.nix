@@ -4,6 +4,7 @@
   # Modules
   imports = [
     ./modules/apps/development-tools.nix
+    ./modules/apps/flatpaks.nix
     ./modules/apps/fonts.nix
     ./modules/apps/packages.nix
     ./modules/apps/programs.nix
