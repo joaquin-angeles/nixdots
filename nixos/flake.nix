@@ -8,12 +8,14 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
     
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-25.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # Integrations
-  outputs = { self, nixpkgs, unstable, home-manager, ... }:
+  outputs = { self, nixpkgs, unstable, nix-flatpak, home-manager, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -21,6 +23,7 @@
       nixosConfigurations.home = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          nix-flatpak.nixosModules.nix-flatpak
           ./configuration.nix
 
           # Home manager

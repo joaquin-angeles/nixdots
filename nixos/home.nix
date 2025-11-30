@@ -28,14 +28,17 @@
     ./modules/home/environment.nix # Environment variables
     ./modules/home/apps/fonts.nix # Fonts
 
+    # Flatpaks
+    ./modules/home/apps/flatpaks.nix
+
     # Packages
-    ./modules/home/apps/packages.nix
-    ./modules/home/apps/programs.nix
+    ./modules/home/apps/packages.nix # User packages
+    ./modules/home/apps/programs.nix # Program configuration
 
     # Zsh
-    ./modules/home/shell/base.nix
-    ./modules/home/shell/aliases.nix
-    ./modules/home/shell/functions.nix
+    ./modules/home/shell/base.nix # Enabling shell and/or shell plugins
+    ./modules/home/shell/aliases.nix # Shell aliases
+    ./modules/home/shell/functions.nix # Pre-initialization
     # ./modules/home/shell/keybinds.nix
   ];
 }
