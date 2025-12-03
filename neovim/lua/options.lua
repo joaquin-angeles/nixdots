@@ -11,19 +11,21 @@ vim.cmd [[
 ]]
 
 -- Line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- Absolute line numbers in Insert
 vim.api.nvim_create_autocmd("InsertEnter", {
   callback = function()
-    vim.opt.relativenumber = false
+    vim.o.relativenumber = false
   end,
 })
 
 -- Relative lines on Normal mode
 vim.api.nvim_create_autocmd("InsertLeave", {
   callback = function()
-    vim.opt.relativenumber = true
+    vim.o.relativenumber = true
   end,
 })
+
+vim.o.swapfile = false -- Disable swap file
