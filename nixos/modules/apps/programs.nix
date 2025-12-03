@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland.enable = true; # Hyprland
+  programs.mango.enable = true; # MangoWC
 
   # Steam
   programs.steam = {

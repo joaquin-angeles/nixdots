@@ -21,18 +21,28 @@
     systemd-boot.enable = true;
   };
 
-  # Container portals
+  # Enable XDG portals
   xdg.portal = {
-    config = {
-      hyprland.preferred = [ "hyprland" "gtk" ];
-    };
     enable = true;
+    xdgOpenUsePortal = true;
+
+    # enable wlroots-specific backend
+    wlr.enable = true;
+
+    # Use a “full-featured” portal for the rest (file dialogs, open-URL, …)
     extraPortals = with pkgs; [
       xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
     ];
-    xdgOpenUsePortal = true;
+
+    config = {
+      common = { default = [ "gtk" ]; };
+      hyprland.preferred = [ "hyprland" "gtk" ];
+    };
   };
+
+  # To ensure that desktop-portal definitions get linked
+  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
   # Hardware settings
   hardware.graphics = {

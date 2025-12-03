@@ -4,57 +4,34 @@ BATTERY_DEVICE=$(upower -e | grep BAT)
 KBD_DEVICE=$(brightnessctl --list | grep 'kbd_backlight' | awk -F"'" '{print $2}')
 current_state=""
 
-# Determine environment
-if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
-    ENV="hyprland"
-else
-    ENV="wlroots"
+# Ensure Hyprland is running
+if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+  echo "Hyprland is not running. Exiting."
+  exit 1
 fi
 
-# Ensure battery device exists
+# Get the connected monitor name
+MONITOR=$(hyprctl monitors | awk '/Monitor/ {print $2}' | head -n 1)
+
+# Ensure upower is working
 if [ -z "$BATTERY_DEVICE" ]; then
-    echo "Battery device not found. Is upower enabled?"
-    exit 1
+  echo "Battery device not found. Is upower enabled?"
+  exit 1
 fi
 
-# Get primary monitor name
-get_primary_monitor() {
-    if [ "$ENV" = "hyprland" ]; then
-        hyprctl monitors | awk '/Monitor/ {print $2}' | head -n 1
-    else
-        wlr-randr | awk '/ connected/ {print $1}' | head -n 1
-    fi
-}
-
-# Set monitor mode (resolution + refresh)
-set_monitor_mode() {
-    local monitor="$1"
-    local mode="$2"  # e.g. "1920x1080@60"
-
-    if [ "$ENV" = "hyprland" ]; then
-        hyprctl keyword monitor "$monitor,$mode,auto,1.0"
-    else
-        # wlr‑randr expects --output <name> --mode <WxH[@Refresh]>
-        wlr-randr --output "$monitor" --mode "$mode"
-    fi
-}
-
-# Monitor battery changes
+# Start monitoring battery state
 upower --monitor | grep --line-buffered "$BATTERY_DEVICE" | while read -r _; do
-    new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
-    if [ "$new_state" != "$current_state" ]; then
-        current_state="$new_state"
-
-        MON= $(get_primary_monitor)
-
-        if [ "$new_state" = "discharging" ]; then
-            brightnessctl set 40%
-            brightnessctl --device="$KBD_DEVICE" set 0
-            set_monitor_mode "$MON" "1920x1080@60"
-        else
-            brightnessctl set 50%
-            brightnessctl --device="$KBD_DEVICE" set 100
-            set_monitor_mode "$MON" "1920x1080@120"
-        fi
-    fi
+new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
+if [ "$new_state" != "$current_state" ]; then
+  current_state="$new_state"
+  if [ "$new_state" = "discharging" ]; then
+    brightnessctl set 40%
+    brightnessctl --device="$KBD_DEVICE" set 0
+    hyprctl keyword monitor "$MONITOR,1920x1080@60,auto,1.0"
+  else
+    brightnessctl set 50%
+    brightnessctl --device="$KBD_DEVICE" set 100%
+    hyprctl keyword monitor "$MONITOR,1920x1080@120,auto,1.0"
+  fi
+fi
 done &

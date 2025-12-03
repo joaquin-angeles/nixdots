@@ -1,11 +1,20 @@
 {
   description = "Joaquin's NixOS";
 
-  # Repositories
+  # Inputs (repositories)
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Main branch
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Unstable branch
-    
+
+    # MangoWC
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Flake parts
+    flake-parts.url = "github:hercules-ci/flake-parts";
+
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -14,7 +23,7 @@
   };
 
   # Integrations
-  outputs = { self, nixpkgs, unstable, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -23,14 +32,18 @@
         inherit system;
         modules = [
           ./configuration.nix
+          inputs.mango.nixosModules.mango # MangoWC
 
           # Home manager
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.joaquin = import ./home.nix;
-            home-manager.backupFileExtension = "bak";
+            home-manager = {
+              backupFileExtension = "bak";
+              users.joaquin = import ./home.nix;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+            };
           }
 
           # Overlays

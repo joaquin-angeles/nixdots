@@ -209,4 +209,7 @@ keybinds clear-defaults=true {
   renamepane {
     bind "Esc" { UndoRenamePane; SwitchToMode "pane"; }
   }
+  ui {
+    hide_session_name true
+  }
 }
