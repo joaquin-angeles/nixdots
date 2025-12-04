@@ -5,20 +5,19 @@
 ---@type ChadrcConfig
 local M = {}
 
--- Theming
 M.base46 = {
-  theme = "default-mono",
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-  },
+	theme = "default-mono",
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+	},
 }
 
--- Buffer line
+M.nvdash = { load_on_startup = true }
 -- M.ui = {
---   tabufline = {
---     lazyload = false,
---   },
+--       tabufline = {
+--          lazyload = false
+--      }
 -- }
 
 return M
