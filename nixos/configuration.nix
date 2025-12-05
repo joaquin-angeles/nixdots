@@ -31,7 +31,7 @@
     ];
 
     config = {
-      common = { default = [ "gtk" ]; };
+      common.default = [ "gtk" ];
       hyprland.preferred = [ "hyprland" "gtk" ];
     };
   };
