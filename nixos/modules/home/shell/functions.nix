@@ -2,6 +2,11 @@
 
 {
   programs.zsh.initContent = ''
+    # Cursor configuration
+    precmd() {
+      echo -ne '\e[5 q'
+    }
+    # SSH-compatible terminal
     export TERM=xterm-256color
 
     # Fetch with nitch
