@@ -3,9 +3,9 @@
 {
   # System packages
   environment.systemPackages = with pkgs; [
-    blueman
     brightnessctl
     nautilus
+    unstable.bluetui
     wl-clipboard
     xdg-user-dirs
     zenity
