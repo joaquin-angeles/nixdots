@@ -3,7 +3,7 @@
 {
   programs.zsh.initContent = ''
     # Cursor configuration
-    printf "\\033[5 q"
+    printf "\\033[6 q"
 
     # Fetch
     if command -v fastfetch >/dev/null 2>&1; then
@@ -35,8 +35,10 @@
 
     # Better yazi
     yz() {
-      local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+      local tmp
+      tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
       yazi "$@" --cwd-file="$tmp"
+      printf '\e[6 q'
       if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp"

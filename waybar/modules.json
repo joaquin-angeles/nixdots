@@ -51,13 +51,13 @@
 
   "pulseaudio": {
     "format": "{icon}",
-    "format-muted": "",
+    "format-muted": "󰖁",
     "format-icons": {
       "default": [
-        "",
-        "",
-        "",
-        ""
+        "󰝟",
+        "󰕿",
+        "󰖀",
+        "󰕾"
       ]
     },
     "on-click": "alacritty --title=Wiremix -e wiremix",
