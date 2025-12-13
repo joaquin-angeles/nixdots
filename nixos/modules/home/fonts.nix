@@ -17,7 +17,7 @@
   # Font configurations
   fonts.fontconfig.defaultFonts = {
     emoji = [ "Noto Color Emoji" ];
-    monospace = [ "MesloLGS Nerd Font Mono" ];
+    monospace = [ "MesloLGM Nerd Font Mono" ];
     sansSerif = [ "Inter" ];
     serif = [ "Times New Roman" ];
   };

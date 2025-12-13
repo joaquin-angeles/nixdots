@@ -49,6 +49,7 @@ window#waybar {
 
 /* Window title or active window module */
 #window {
+  color: #5f5f5f;
   padding-left: 5pt;
   padding-right: 5pt;
 }
