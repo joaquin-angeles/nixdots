@@ -9,7 +9,6 @@
     eza
     fd
     file-roller
-    grim
     hyprlock
     hyprpicker
     imv
