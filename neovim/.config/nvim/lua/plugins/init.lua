@@ -5,15 +5,20 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  -- LSP repositories for Mason
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
+
+  -- Undo history
+  { "mbbill/undotree", lazy = false, },
+
+  -- Fzf integratiion into telescope
   {
-    "mbbill/undotree",
-    lazy = false,
+    'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install'
   },
 }

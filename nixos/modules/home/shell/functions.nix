@@ -51,6 +51,7 @@
     # Set window titles
     precmd() {
       print -Pn "\e]0;%~\a"
+      printf '\e[5 q'
     }
   '';
 }
