@@ -9,3 +9,4 @@ Preview images:
 ![Floating](./previews/floating.png)
 ![Wallpaper](./previews/background.png)
 ![App launcher](./previews/rofi.png)
+![TUI's](./previews/utils.png)
