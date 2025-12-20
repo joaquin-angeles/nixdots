@@ -15,7 +15,7 @@
   # Main integrations
   outputs = inputs@{ self, nixpkgs, unstable, home-manager, ... }: {
     # Imported configurations
-    nixosConfigurations.home = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       modules = [
         ./configuration.nix # System configuration
 
