@@ -2,17 +2,12 @@ require "nvchad.options"
 
 -- add yours here!
 
-local opt = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
-
--- Transparent background
-vim.cmd [[
-  hi Normal guibg=NONE ctermbg=NONE
-]]
+-- local o = vim.o
+-- o.cursorlinevim.o ='both' -- to enable cursorline!
 
 -- Line numbers
-opt.number = true
-opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
-opt.swapfile = false -- Disable swap file
-opt.guicursor = "i:block-blinkwait0-blinkon500-blinkoff500" -- Cursor configuration
+vim.o.swapfile = false -- Disable swap file
+vim.o.guicursor = "i:block-blinkon500-blinkoff500" -- Cursor configuration
