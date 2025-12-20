@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "home"; # Define a hostname
+    hostName = "nyxos"; # Define a hostname
     wireless.iwd.enable = true; # iwd > wpa_supplicant
 
     # Firewall
