@@ -5,9 +5,7 @@
     # Cursor and title configuration
     precmd() {
       printf '\e[1 q'
-      local term
-      term=$(ps -o comm= -p $(ps -o ppid= -p $$))
-      print -Pn "\e]0;%~ | $term\a"
+      print -Pn "\e]0;%n@%m: %~\a"
     }
 
     # Fetch
@@ -36,20 +34,6 @@
           bat --color=always --theme=base16 --style=plain --paging=never {}
         fi
       '
-    }
-
-    # Better yazi
-    yz() {
-      local tmp
-      tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-      yazi "$@" --cwd-file="$tmp"
-      if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -n "$dir" ] && [ -d "$dir" ]; then
-          cd "$dir" || return 1
-        fi
-      fi
     }
   '';
 }
