@@ -17,7 +17,7 @@
     # Imported configurations
     nixosConfigurations.nyxos = nixpkgs.lib.nixosSystem {
       modules = [
-        ./nixos/configuration.nix # System configuration
+        ./configuration.nix # System configuration
 
         # User configuration
         home-manager.nixosModules.home-manager
@@ -25,7 +25,7 @@
           nixpkgs.config.allowUnfree = true; # Allow proprietary
           home-manager = {
             backupFileExtension = "bak"; # Fallback for existing files
-            users.joaquin = import ./nixos/home.nix; # Main configuration file
+            users.joaquin = import ./home.nix; # Main configuration file
             useGlobalPkgs = true; # Merge into packages
             useUserPackages = true; # Utilize per-user package installation
           };
