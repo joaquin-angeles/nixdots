@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Show keybinds in Rofi and copy selected line to clipboard
-cat <<EOF | rofi -dmenu -config ./cheatsheet.rasi -p ""
+cat <<EOF
 SUPER + Return        → Open terminal (Alacritty)
 SUPER + Space         → App launcher (Rofi)
 SUPER + B             → Browser (Zen)
