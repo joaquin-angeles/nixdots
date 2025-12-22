@@ -26,7 +26,7 @@
     # Configurations
     ./home/dotfiles.nix
     ./home/environment.nix # Environment variables
-    ./home/fonts.nix # Fonts
+    ./home/apps/fonts.nix # Fonts
 
     # Packages
     ./home/apps/packages.nix # User packages
