@@ -69,7 +69,7 @@
   security.sudo-rs.enable = true;
 
   # User configuration
-  users.users.joaquin = {
+  users.users.user = {
     extraGroups = [ "wheel" ];
     isNormalUser = true;
     shell = pkgs.zsh;

@@ -2,8 +2,8 @@
 
 {
   # User configuration
-  home.username = "joaquin";
-  home.homeDirectory = "/home/joaquin";
+  home.username = "user";
+  home.homeDirectory = "/home/user";
   home.stateVersion = "25.05";
 
   # Cursor theming
