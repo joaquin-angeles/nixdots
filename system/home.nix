@@ -31,6 +31,7 @@
     # Packages
     ./home/apps/packages.nix # User packages
     ./home/apps/programs.nix # Program configuration
+    ./home/apps/scripts.nix # Shell scripts
 
     # Zsh
     ./home/shell/base.nix # Enabling shell and/or shell plugins
