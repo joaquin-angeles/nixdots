@@ -64,7 +64,7 @@
     "zen-browser": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "unstable"
         ]
       },
       "locked": {

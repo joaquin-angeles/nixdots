@@ -10,6 +10,8 @@
   home.file.".config/swayosd".source = ../../swayosd;
   home.file.".config/waybar".source = ../../waybar;
   home.file.".config/zellij".source = ../../zellij;
+  home.file.".local/bin/cheatsheet.sh".source = ../../cheatsheet.sh;
+  home.file.".local/bin/cheatsheet.rasi".source = ../../cheatsheet.rasi;
   home.file.".p10k.zsh".source = ../../zsh/.p10k.zsh;
   home.file.".zprofile".source = ../../zsh/.zprofile;
 }
