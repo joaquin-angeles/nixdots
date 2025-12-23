@@ -62,5 +62,5 @@
     from var(--error-bg-color) var(--standalone-color-oklab)
   ); --active-toggle-bg-color: rgb(255 255 255 / 20%); --active-toggle-fg-color: #dfdfdf; --overview-bg-color: #2c2c2c; --overview-fg-color: #dfdfdf; }
 
-@import '../gtk-3.0/libadwaita.css';
-@import '../gtk-3.0/libadwaita-tweaks.css';
+@import './libadwaita.css';
+@import './libadwaita-tweaks.css';

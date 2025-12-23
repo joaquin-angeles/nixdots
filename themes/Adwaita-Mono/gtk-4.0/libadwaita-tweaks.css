@@ -1,7 +1,3 @@
-@use '../settings' with (
-  $toolkit: 'gtk4'
-);
-@use '../functions' as *;
 @define-color accent_bg_color @blue_3;
 @define-color accent_fg_color white;
 :root {
@@ -14,7 +10,7 @@
   --accent-pink: #d56199;
   --accent-purple: #9141ac;
   --accent-slate: #6f8396;
-  --accent-bg-color: var(--accent-blue);
+  --accent-bg-color: #5f708c;
   --accent-fg-color: @accent_fg_color;
   --window-bg-color: @window_bg_color;
   --headerbar-bg-color: @headerbar_bg_color; }

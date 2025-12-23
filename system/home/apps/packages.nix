@@ -3,7 +3,6 @@
 {
   # User packages
   home.packages = with pkgs; [
-    adw-gtk3
     alacritty
     btop
     celluloid
