@@ -75,7 +75,12 @@
     "tooltip-format": "Discharging ({capacity}%)",
     "tooltip-format-charging": "Charging ({capacity}%)",
     "tooltip-format-full": "Full (100%)",
-    "interval": 1,
+    "interval": 10,
+    "states": {
+      "good": 80,
+      "low": 30,
+      "critical": 19,
+    },
   },
 
   "custom/clipboard": {

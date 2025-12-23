@@ -8,10 +8,9 @@ window#waybar {
 }
 
 #sys-info {
-  background-color: #282828;
+  background-color: #282a2a;
   margin-top: 2pt;
   margin-bottom: 2pt;
-  border: 1px solid #404040;
   border-radius: 8px;
 }
 
@@ -39,15 +38,15 @@ window#waybar {
 /* Power icon/module */
 #custom-power {
   color: @red;
-  background-color: #282828;
+  background-color: #282a2a;
   margin-top: 2pt;
   margin-bottom: 2pt;
-  border: 2px solid #753431;
+  border: 1px solid #753431;
   border-radius: 8px;
   margin-right: 3pt;
   margin-left: 5pt;
-  padding-right: 6pt;
   padding-left: 6pt;
+  padding-right: 6pt;
   /* color: @red; */
 }
 
@@ -67,7 +66,15 @@ window#waybar {
 
 #battery {
   color: @green;
-  padding-right: 6pt;
+  padding-right: 7pt;
+}
+
+#battery.low {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
 }
 
 /* System tray */
@@ -84,13 +91,12 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: #282828;
+  background-color: #282a2a;
   margin-top: 2pt;
   margin-bottom: 2pt;
   margin-left: 5pt;
   padding-left: 4pt;
   padding-right: 4pt;
-  border: 1px solid #404040;
   border-radius: 8px;
 }
 
