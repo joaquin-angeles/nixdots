@@ -19,7 +19,7 @@
     emoji = [ "Noto Color Emoji" ];
     monospace = [ "JetBrainsMono Nerd Font Mono" ];
     # monospace = [ "MesloLGM Nerd Font Mono" ];
-    sansSerif = [ "Inter" ];
+    sansSerif = [ "Rubik" ];
     serif = [ "Times New Roman" ];
   };
 }
