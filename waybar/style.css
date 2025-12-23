@@ -3,14 +3,28 @@
 window#waybar {
   font: 13.5pt "JetBrainsMono Nerd Font Propo";
   background-color: @bg;
-  border-bottom: 1px solid lighter(@bright-bg);
+  border-bottom: 1px solid darker(#494949);
   color: @fg;
 }
 
+#sys-info {
+  background-color: #2a2a2a;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+  border: 1px solid #404040;
+  border-radius: 8px;
+}
+
 #clock {
-  color: @fg;
+  background-color: #2a2a2a;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  color: @yellow;
+  margin-left: 4pt;
   padding-left: 8pt;
-  padding-right: 4pt;
+  padding-right: 6pt;
 }
 
 /* Custom menu section */
@@ -23,20 +37,36 @@ window#waybar {
 
 /* Power icon/module */
 #custom-power {
-  margin-left: 9pt;
+  color: @red;
+  background-color: #2a2a2a;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+  border: 2px solid #753431;
+  border-radius: 8px;
   margin-right: 3pt;
+  margin-left: 5pt;
+  padding-right: 6pt;
+  padding-left: 6pt;
   /* color: @red; */
 }
 
 /* Network module */
 #network {
+  color: @blue;
   margin-right: 11pt;
+  padding-left: 6pt;
 }
 
 /* PulseAudio module */
 #pulseaudio {
+  color: @magenta;
   font-size: 15pt;
   margin-right: 11.5pt;
+}
+
+#battery {
+  color: @green;
+  padding-right: 6pt;
 }
 
 /* System tray */
@@ -44,24 +74,39 @@ window#waybar {
   margin-left: 4pt;
   padding-left: 5pt;
   padding-right: 5pt;
-  background-color: lighter(@bright-bg);
+  background-color: lighter(@bg);
 }
 
 /* Window title or active window module */
 #window {
-  color: #5f5f5f;
+  color: #6A5F4C;
   padding-left: 6pt;
   padding-right: 6pt;
 }
 
+#workspaces {
+  background-color: #2a2a2a;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+  margin-left: 5pt;
+  padding-left: 4pt;
+  padding-right: 4pt;
+  border: 1px solid #404040;
+  border-radius: 8px;
+}
+
 /* Workspaces buttons */
 #workspaces button {
-  min-width: 9px;
-  padding: 0 3px;
+  padding: 0 4px;
   color: @fg;
 }
 
+#workspaces button.empty {
+  color: darker(#6A5F4C);
+}
+
 #workspaces button.active {
+  color: @green;
   border-radius: 0;
 }
 

@@ -12,7 +12,6 @@
     ".config/swayosd".source = ../../swayosd;
     ".config/waybar".source = ../../waybar;
     ".config/zellij".source = ../../zellij;
-    ".local/share/themes/Adwaita-Mono".source = ../../themes/Adwaita-Mono;
     ".p10k.zsh".source = ../../zsh/.p10k.zsh;
     ".zprofile".source = ../../zsh/.zprofile;
   };

@@ -5,15 +5,13 @@
   "height": 24,
   "spacing": 0,
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window",
-  ],
-  // "modules-center": [ "clock" ],
-  "modules-right": [
-    "network",
-    "pulseaudio",
-    "battery",
     "clock",
+    "hyprland/workspaces",
+  ],
+  "modules-center": [ "hyprland/window", ],
+  "modules-right": [
+    "group/sys-info",
+    "custom/power",
     "tray",
   ],
 }

@@ -1,16 +1,52 @@
 * {
-  font: "monospace 13.15";
-  text-color:      #afafaf;
-  foreground:      #865054;
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+    font: "monospace 13.15";
+
+    /* Gruvbox dark colors */
+    gruvbox-dark-bg0-hard:     #1d2021;
+    gruvbox-dark-bg0:          #282828;
+    gruvbox-dark-bg2:          #504945;
+    gruvbox-dark-fg0:          #fbf1c7;
+    gruvbox-dark-fg1:          #ebdbb2;
+    gruvbox-dark-red-dark:     #cc241d;
+    gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-yellow-dark:  #d79921;
+    gruvbox-dark-yellow-light: #fabd2f;
+    gruvbox-dark-gray:         #a89984;
+
+    /* Theme colors */
+    background:                  @gruvbox-dark-bg0-hard;
+    background-color:            @background;
+    foreground:                  @gruvbox-dark-fg1;
+    border-color:                @gruvbox-dark-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @gruvbox-dark-bg0;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @gruvbox-dark-bg2;
+    selected-normal-foreground:  @gruvbox-dark-fg0;
+
+    active-background:           @gruvbox-dark-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
 }
 
-/* Configuration */
 configuration {
-  modi: "drun";
-  show-icons: false;
-  display-run:  "";
-  display-drun:  "";
-  display-emoji: "";
   disable-history: true;
   kb-row-up:        "Up,Control+k";
   kb-row-down:      "Down,Control+j";
@@ -18,85 +54,18 @@ configuration {
   kb-remove-to-eol: "";
 }
 
-/* Window appearance */
 window {
-  transparency:   "real";
-  width:          445px;
-  height:         560px;
-  border-radius:  7px;
-  background-color: #1c1c1c;
-  border:         2px solid;
-  border-color:   #353535;
-  padding:        6px;
+  width:          550px;
+  height:         550px;
+  border-radius:  5px;
+  padding:        5px;
 }
 
 /* Layout */
 mainbox {
   spacing: 10px;
-  margin:  0;
-  padding: 8px;
-  children: ["listview", "inputbar", "message"];
+  margin:  10px;
+  children: ["inputbar", "listview", "message"];
 }
 
-/* Input bar */
-inputbar {
-  children: ["prompt", "entry"];
-  spacing:  10px;
-  padding:  12px 10px;
-  border-radius: 18px;
-  border: 2px solid;
-  border-color: #353535;
-  background-color: #252525;
-}
-
-prompt {
-  text-color: #afafaf;
-}
-
-entry {
-  placeholder: "Type to search…";
-  placeholder-color: #595959;
-  text-color: #afafaf;
-}
-
-/* List view */
-listview {
-  columns:       1;
-  lines:         7;
-  spacing:       2px;
-  fixed-height:  true;
-  fixed-columns: false;
-  scrollbar:     false;
-  cycle:         false;
-  border:        0px solid;
-  layout:        "vertical";
-}
-
-/* Elements */
-element {
-  spacing: 10px;
-  margin:  0;
-  padding: 8px;
-}
-
-element normal.normal {
-  background-color: transparent;
-  text-color:       #353535;
-}
-
-element alternate.normal {
-  background-color: transparent;
-  text-color:       #353535;
-}
-
-element selected.normal,
-element selected.active {
-  background-color: transparent;
-  text-color:       #afafaf;
-}
-
-/* Message area */
-message {
-  border: 8px solid;
-  text-color: #865054;
-}
+@import "./gruvbox-common.rasi"

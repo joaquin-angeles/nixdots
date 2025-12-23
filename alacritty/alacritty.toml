@@ -20,35 +20,29 @@ size = 13.5
 [env]
 TERM = "xterm-256color"
 
-# Colorscheme
-# [colors.cursor]
-# text   = "#1c1c1c"
-# cursor = "#afafaf"
-
+# Default colors
 [colors.primary]
-background = "#1c1c1c"
-foreground = "#afafaf"
+background = '#1d2021'
+foreground = '#d4be98'
 
-[colors.selection]
-text = "#1c1c1c"
-background = "#afafaf"
-
+# Normal colors
 [colors.normal]
-black   = "#1c1c1c"
-red     = "#865054"
-green   = "#5f705f"
-yellow  = "#8c8260"
-blue    = "#5f708c"
-magenta = "#75607a"
-cyan    = "#5f7a7a"
-white   = "#afafaf"
+black   = '#1d2021'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'
 
+# Bright colors (same as normal colors)
 [colors.bright]
-black   = "#3d3d3d"
-red     = "#976061"
-green   = "#729472"
-yellow  = "#a4926b"
-blue    = "#7294a4"
-magenta = "#9272a4"
-cyan    = "#72a4a4"
-white   = "#f1f1f1"
+black   = '#3d3d3d'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#d8a657'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#d4be98'

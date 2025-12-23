@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "default-mono",
+	theme = "gruvchad",
 	hl_override = {
 		Comment = { italic = true },
 		["@comment"] = { italic = true },

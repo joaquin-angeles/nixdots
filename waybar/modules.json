@@ -7,9 +7,7 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": "",
+      "default": "",
       "7": "7",
       "8": "8",
       "9": "9",
@@ -89,7 +87,8 @@
   "clock": {
     "format": "{:%H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%b %d, %Y on a %A}",
+    "tooltip-format": "{:%b %d, %Y on a %A} (Click me)",
+    "on-click": "cheatsheet.sh | rofi -dmenu -p 'keybinds' -theme-str 'window { width: 650px; }'",
     "interval": 1,
   },
 
@@ -98,15 +97,12 @@
     "spacing": 10,
   },
 
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
+  "group/sys-info": {
+    "orientation": "horizontal",
     "modules": [
-      "custom/expand-icon",
-      "tray"
+      "network",
+      "pulseaudio",
+      "battery"
     ]
   },
 
@@ -116,7 +112,7 @@
   },
    
   "custom/power": {
-    "format": "󰍃",
+    "format": "󰐥",
     "tooltip": true,
     "tooltip-format": "Power menu",
     "on-click": "power-menu"
