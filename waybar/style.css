@@ -8,7 +8,7 @@ window#waybar {
 }
 
 #sys-info {
-  background-color: #2a2a2a;
+  background-color: #282828;
   margin-top: 2pt;
   margin-bottom: 2pt;
   border: 1px solid #404040;
@@ -17,7 +17,7 @@ window#waybar {
 
 #clock {
   /*
-  background-color: #2a2a2a;
+  background-color: #282828;
   margin-top: 2pt;
   margin-bottom: 2pt;
   border: 1px solid #404040;
@@ -39,7 +39,7 @@ window#waybar {
 /* Power icon/module */
 #custom-power {
   color: @red;
-  background-color: #2a2a2a;
+  background-color: #282828;
   margin-top: 2pt;
   margin-bottom: 2pt;
   border: 2px solid #753431;
@@ -84,7 +84,7 @@ window#waybar {
 }
 
 #workspaces {
-  background-color: #2a2a2a;
+  background-color: #282828;
   margin-top: 2pt;
   margin-bottom: 2pt;
   margin-left: 5pt;
