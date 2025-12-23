@@ -21,7 +21,12 @@
 
     config = {
       common.default = [ "gtk" ];
-      hyprland.preferred = [ "hyprland" "gtk" ];
+
+      # Hyprland desktop portal configuration
+      hyprland = { 
+        preferred = [ "hyprland" "gtk" ];
+        "org.freedesktop.portal.FileChooser" = [ "gtk" ];
+      };
     };
   };
   environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
