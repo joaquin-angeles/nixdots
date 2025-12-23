@@ -1,9 +1,9 @@
-# NyxOS
+# Joaquin's Gruvy NixdOtS
 (Run Super, shift + SPC to open the cheatsheet)
 
-A *modern, extensible* **Hyprland/Wayland** configuration for NixOS with a **striking dark aesthetic** that *doesn't sacrifice vibrant colors*.
+A *modern, extensible* **Hyprland/Wayland** configuration for NixOS that utilizes the **Gruvbox** colorscheme.
 
-NyxOS delivers a sleek, performant desktop environment built entirely with Nix flakes and Home Manager—fully declarative, reproducible, and easy to customize.
+These configurations work to deliver a sleek, performant desktop environment built entirely with Nix flakes and Home Manager—fully declarative, reproducible, and easy to customize.
 
 # Features
 - Lightweight & Performant
@@ -32,13 +32,13 @@ Almost everything is managed in pure Nix via Home Manager—no scattered config 
 
 # Installation
 
-Clone the repository: `git clone https://github.com/joaquin-angeles/NyxOS.git && cd NyxOS`
+Clone the repository: `git clone https://github.com/joaquin-angeles/nixdots.git && cd nixdots`
 
-Build and switch to the configuration: `sudo nixos-rebuild switch --flake --impure ./system#nyxos`
+Build and switch to the configuration: `sudo nixos-rebuild switch --flake --impure ./system#nixos-btw`
 
 # Customization
 
-All system and user configurations are located in flake.nix, system/, and home/ directories. Extending or overriding modules is straightforward thanks to Nix's declarative nature.
+All system and user configurations are located in flake.nix, system/core, and system/home directories. Extending or overriding modules is straightforward thanks to Nix's declarative nature.
 
 # Preview Gallery
 
