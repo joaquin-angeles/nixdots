@@ -2,7 +2,7 @@
   /* Theme settings */
   highlight: bold italic;
   scrollbar: true;
-  font: "monospace 13.15";
+  font: "monospace 13.5";
 
   /* Gruvbox dark colors */
   gruvbox-dark-bg0-hard:     #1d2021;
@@ -57,18 +57,4 @@ configuration {
   kb-remove-to-eol: "";
 }
 
-window {
-  width:          550px;
-  height:         550px;
-  border-radius:  5px;
-  padding:        5px;
-}
-
-/* Layout */
-mainbox {
-  spacing: 10px;
-  margin:  10px;
-  children: ["inputbar", "listview", "message"];
-}
-
-@import "./gruvbox-common.rasi"
+@import "./gruvbox.rasi"
