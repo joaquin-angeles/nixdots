@@ -15,6 +15,14 @@
     size = 24;
   };
 
+  # GTK theming
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-Mono";
+    };
+  };
+
   # Qt theming
   qt = {
     enable = true;
