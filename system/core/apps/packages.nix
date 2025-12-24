@@ -3,7 +3,6 @@
 {
     # System packages
     environment.systemPackages = with pkgs; [
-        base16-schemes
         brightnessctl
         gtk3
         gtk4
