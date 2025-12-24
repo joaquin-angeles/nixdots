@@ -28,9 +28,9 @@
         fzf() {
           command fzf --preview '
             if [ -d {} ]; then
-                eza --icons always --group-directories-first --git {} || ls -lh {}
+                eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
             else
-                bat {}
+                bat --color=always {}
             fi
           '
         }
