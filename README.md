@@ -45,9 +45,6 @@ All system and user configurations are located in flake.nix, system/core, and sy
 ### Tiled Layout
 ![Tiled windows](./previews/tiled.png)
 
-### Terminal & TUI Applications
-![TUI utilities](./previews/utils.png)
-
 ### Floating Windows
 ![Floating windows](./previews/floating.png)
 
@@ -56,3 +53,6 @@ All system and user configurations are located in flake.nix, system/core, and sy
 
 ### App Launcher
 ![Rofi/Wofi launcher](./previews/rofi.png)
+
+### GUI applications
+![GUI](./previews/gtk&qt.png)
