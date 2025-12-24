@@ -44,14 +44,6 @@
       yatline = pkgs.yaziPlugins.yatline;
     };
 
-    # Misc.
-    extraConfig = ''
-    [[plugin.previewers]]
-    name = "bat-code"
-    run  = "piper 'bat --theme=TwoDark --style=numbers --color=always \"${job.file}\"'"
-    mime = "text/*"
-    '';
-
     extraPackages = with pkgs; [
       ffmpegthumbnailer
       ueberzugpp
