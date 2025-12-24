@@ -11,12 +11,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        # Stylix
-        stylix = {
-            url = "github:nix-community/stylix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         # Zen Browser
         zen-browser = {
             url = "github:youwen5/zen-browser-flake";
@@ -25,19 +19,17 @@
     };
 
     # Main integrations
-    outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, stylix, ... }: {
+    outputs = inputs@{ self, nixpkgs, unstable, home-manager, zen-browser, ... }: {
         # Imported configurations
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
                 ./configuration.nix # System configuration
-                stylix.nixosModules.stylix
 
                 # User configuration
                 home-manager.nixosModules.home-manager
                 {
-                    stylix.homeManagerIntegration.autoImport = false;
                     nixpkgs.config.allowUnfree = true; # Allow proprietary
                     home-manager = {
                         backupFileExtension = "bak"; # Fallback for existing files

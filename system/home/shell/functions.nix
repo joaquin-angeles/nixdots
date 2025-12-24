@@ -4,14 +4,14 @@
     programs.zsh.initContent = ''
         # Cursor and title configuration
         precmd() {
-          printf '\e[1 q'
-          print -Pn "\e]0;%n@%m: %~\a"
+            printf '\e[1 q'
+            print -Pn "\e]0;%n@%m: %~\a"
         }
 
         # Fetch
         if command -v fastfetch >/dev/null 2>&1; then
-          fastfetch
-          echo ""
+            fastfetch
+            echo ""
         fi
 
         source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme # Prompt
@@ -21,16 +21,16 @@
 
         # Better CD
         cd() {
-          z "$@" && eza
+            z "$@" && eza --icons always --group-directories-first --git
         }
 
         # Better FZF (faster preview)
         fzf() {
           command fzf --preview '
             if [ -d {} ]; then
-              eza --icons -lh --color=always {} || ls -lh {}
+                eza --icons always --group-directories-first --git {} || ls -lh {}
             else
-              bat ---paging=never {}
+                bat {}
             fi
           '
         }

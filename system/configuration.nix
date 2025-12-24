@@ -7,16 +7,7 @@
         ./core/hardware.nix
         ./core/services.nix
         /etc/nixos/hardware-configuration.nix
-        inputs.stylix.nixosModules.stylix
     ];
-
-    # Stylix
-    stylix = {
-        enable = true;
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-        image = ../backgrounds/castle.jpg;
-        polarity = "dark";
-    };
 
     # Display Manager
     services.displayManager.ly.enable = true;

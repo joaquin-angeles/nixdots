@@ -1,4 +1,4 @@
-{ config, pkgs, inputs,  ... }:
+{ inputs, config, pkgs,  ... }:
 
 {
     # User configuration
