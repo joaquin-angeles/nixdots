@@ -16,7 +16,7 @@
     };
 
     # Icon theme
-    home.file.".local/share/icons/Papirus".source = ../../icons/Papirus;
+    home.file.".local/share/icons/Papirus".source = ../icons/Papirus;
 
     # GTK theming
     gtk = {

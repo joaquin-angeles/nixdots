@@ -37,10 +37,9 @@ window#waybar {
 /* Power icon/module */
 #custom-power {
   color: @red;
-  background-color: #2b2d2d;
+  background-color: darker(#753431);
   margin-top: 2pt;
   margin-bottom: 2pt;
-  border: 1px solid #753431;
   border-radius: 8px;
   margin-right: 3pt;
   margin-left: 5pt;
