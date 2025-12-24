@@ -21,7 +21,7 @@
 
         # Better CD
         cd() {
-          z "$@" && eza --icons
+          z "$@" && eza
         }
 
         # Better FZF (faster preview)
@@ -30,7 +30,7 @@
             if [ -d {} ]; then
               eza --icons -lh --color=always {} || ls -lh {}
             else
-              bat --color=always --theme=base16 --style=plain --paging=never {}
+              bat ---paging=never {}
             fi
           '
         }
