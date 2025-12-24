@@ -21,6 +21,14 @@
       package = pkgs.gruvbox-gtk-theme;
       name = "Gruvbox-Dark";
     };
+
+    # Enable dark theme
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
   };
 
   # Qt theming

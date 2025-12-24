@@ -13,7 +13,6 @@
     ".config/waybar".source = ../../waybar;
     ".config/zellij".source = ../../zellij;
     ".local/share/icons/Papirus".source = ../../icons/Papirus;
-    ".p10k.zsh".source = ../../zsh/.p10k.zsh;
     ".zprofile".source = ../../zsh/.zprofile;
   };
 }

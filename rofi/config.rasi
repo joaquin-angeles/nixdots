@@ -48,7 +48,7 @@
 
 configuration {
   disable-history: true;
-  matching: "fuzzy";
+  /* matching: "fuzzy"; */
   case-sensitive: false;
   case-smart: true;
   kb-row-up:        "Up,Control+k";

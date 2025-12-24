@@ -1,10 +1,11 @@
 layer=overlay
 margin=6,6,6,12
 width=350
-height=120
+height=100
 default-timeout=3000
-background-color=#1c1c1c
-border-color=#404040
-border-radius=7
+text-color=#d4be98
+background-color=#1d2021
+border-color=#494235
+border-radius=5
 text-alignment=center
-font=Inter, monospace 13
+font=Rubik 13

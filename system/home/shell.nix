@@ -27,6 +27,12 @@
       ignoreSpace = true; # Don't include statements that start with a space
       extended = true;
       ignorePatterns = [ "ls" "cd" "pwd" "ls *" "cd *" "pwd *" ]; # Ignore frequent/redundant commands
+
+      # Ignore duplicate commands
+      ignoreDups = true;
+      ignoreAllDups = true;
+      saveNoDups = true;
+      expireDuplicatesFirst = true;
     };
   };
 }
