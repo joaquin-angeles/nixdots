@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # fzf integration
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+    # fzf integration
+    programs.fzf = {
+        enable = true;
+        enableZshIntegration = true;
+    };
 }

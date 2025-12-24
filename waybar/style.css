@@ -22,7 +22,6 @@ window#waybar {
   border: 1px solid #404040;
   border-radius: 8px;
   */
-  color: @yellow;
   padding-left: 6pt;
   padding-right: 2pt;
 }

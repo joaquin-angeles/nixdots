@@ -2,10 +2,10 @@
 { config, pkgs, ... }:
 
 {
-  # FD
-  programs.fd = {
-    enable = true;
-    hidden = true;
-    extraOptions = [ "--color=always" ];
-  };
+    # FD
+    programs.fd = {
+        enable = true;
+        hidden = true;
+        extraOptions = [ "--color=always" ];
+    };
 }

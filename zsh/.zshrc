@@ -2,7 +2,7 @@ bindkey -e
 
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -17,20 +17,20 @@ eval "$(zoxide init zsh)"
 
 # Set window titles
 precmd() {
-  print -Pn "\e]0;%n@%m:%~\a"
+    print -Pn "\e]0;%n@%m:%~\a"
 }
 
 # Lf file manager
 lfcd () {
-  tmp="$(mktemp)"
-  $HOME/.config/lf/lfrun -last-dir-path="$tmp" "$@"
-  if [ -f "$tmp" ]; then
-    dir="$(cat "$tmp")"
-    rm -f "$tmp"
-    if [ -d "$dir" ]; then
-      cd "$dir"
+    tmp="$(mktemp)"
+    $HOME/.config/lf/lfrun -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            cd "$dir"
+        fi
     fi
-  fi
 }
 alias lf=lfcd
 
@@ -38,9 +38,9 @@ alias lf=lfcd
 ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
 autoload -Uz compinit
 if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
-  compinit -d "$ZSH_COMPDUMP"
+    compinit -d "$ZSH_COMPDUMP"
 else
-  compinit
+    compinit
 fi
 
 # Aliases
@@ -49,9 +49,9 @@ alias c=clear
 alias flatpak='flatpak --user'
 alias fzf="fzf --preview '
 if [ -d {} ]; then
-  eza -l --color=always {} || ls -la {}
+    eza -l --color=always {} || ls -la {}
 else
-  bat --color=always --theme=base16 --style=plain {}
+    bat --color=always --theme=base16 --style=plain {}
 fi
 '"
 alias grep=rg
@@ -68,15 +68,15 @@ alias vim=nvim
 alias v=nvim
 alias nix-shell='nix-shell --run $SHELL'
 cd() {
-  z "$@" && eza
+    z "$@" && eza
 }
 nix() {
-  if [[ $1 == "develop" ]]; then
-    shift
-    command nix develop -c $SHELL "$@"
-  else
-    command nix "$@"
-  fi
+    if [[ $1 == "develop" ]]; then
+        shift
+        command nix develop -c $SHELL "$@"
+    else
+        command nix "$@"
+    fi
 }
 
 # History

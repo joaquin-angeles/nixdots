@@ -1,77 +1,76 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Modules
-  imports = [
-    ./core/apps.nix
-    ./core/hardware.nix
-    ./core/services/networking.nix
-    ./core/services/services.nix
-    /etc/nixos/hardware-configuration.nix
-  ];
-
-  # Display Manager
-  services.displayManager.ly.enable = true;
-
-  # Enable XDG portals
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
+    # Modules
+    imports = [
+        ./core/apps.nix
+        ./core/hardware.nix
+        ./core/services.nix
+        /etc/nixos/hardware-configuration.nix
     ];
 
-    config = {
-      common.default = [ "gtk" ];
+    # Display Manager
+    services.displayManager.ly.enable = true;
 
-      # Hyprland desktop portal configuration
-      hyprland = { 
-        preferred = [ "hyprland" "gtk" ];
-        "org.freedesktop.portal.FileChooser" = [ "gtk" ];
-      };
+    # Enable XDG portals
+    xdg.portal = {
+        enable = true;
+        xdgOpenUsePortal = true;
+        extraPortals = with pkgs; [
+            xdg-desktop-portal-hyprland
+            xdg-desktop-portal-gtk
+        ];
+
+        config = {
+            common.default = [ "gtk" ];
+
+            # Hyprland desktop portal configuration
+            hyprland = { 
+                preferred = [ "hyprland" "gtk" ];
+                "org.freedesktop.portal.FileChooser" = [ "gtk" ];
+            };
+        };
     };
-  };
-  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
+    environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
-  # Nix package manager
-  nix.optimise.automatic = true;
-  nix.settings = {
-    auto-optimise-store = true;
-    experimental-features = [ "nix-command" "flakes" ];
-  };
-  nixpkgs.config.allowUnfree = true;
-
-  # System version
-  system.stateVersion = "25.05";
-
-  # Timezone
-  time.timeZone = "Asia/Manila";
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    extraLocales = [ "en_GB.UTF-8/UTF-8" ];
-    extraLocaleSettings = {
-      LC_TIME = "en_GB.UTF-8";
+    # Nix package manager
+    nix.optimise.automatic = true;
+    nix.settings = {
+        auto-optimise-store = true;
+        experimental-features = [ "nix-command" "flakes" ];
     };
-  };
+    nixpkgs.config.allowUnfree = true;
 
-  # sudo-rs
-  security.sudo.enable = false;
-  security.sudo-rs.enable = true;
+    # System version
+    system.stateVersion = "25.05";
 
-  # User configuration
-  users.users.user = {
-    extraGroups = [ "wheel" ];
-    isNormalUser = true;
-    shell = pkgs.zsh;
-  };
+    # Timezone
+    time.timeZone = "Asia/Manila";
+    i18n = {
+        defaultLocale = "en_US.UTF-8";
+        extraLocales = [ "en_GB.UTF-8/UTF-8" ];
+        extraLocaleSettings = {
+            LC_TIME = "en_GB.UTF-8";
+        };
+    };
 
-  # Zram
-  zramSwap = {
-    algorithm = "zstd";
-    enable = true;
-    memoryPercent = 50;
-    priority = 50;
-    swapDevices = 1;
-  };
+    # sudo-rs
+    security.sudo.enable = false;
+    security.sudo-rs.enable = true;
+
+    # User configuration
+    users.users.user = {
+        extraGroups = [ "wheel" ];
+        isNormalUser = true;
+        shell = pkgs.zsh;
+    };
+
+    # Zram
+    zramSwap = {
+        algorithm = "zstd";
+        enable = true;
+        memoryPercent = 50;
+        priority = 50;
+        swapDevices = 1;
+    };
 }

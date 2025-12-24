@@ -9,24 +9,24 @@ set drawbox true
 
 # Custom functions
 cmd open ${{
-  if (command -v bat >/dev/null 2>&1 && bat "$f" > /dev/null 2>&1) || cat "$f" > /dev/null 2>&1; then
-    nvim "$f"
-  else
-  case $(file --mime-type "$f" -bL) in
-    application/x-executable) "$f" ;;
-    *) xdg-open "$f" ;;
-    esac
-      fi
+    if (command -v bat >/dev/null 2>&1 && bat "$f" > /dev/null 2>&1) || cat "$f" > /dev/null 2>&1; then
+        nvim "$f"
+    else
+    case $(file --mime-type "$f" -bL) in
+        application/x-executable) "$f" ;;
+        *) xdg-open "$f" ;;
+        esac
+            fi
 }}
 cmd mkdir ${{
-  printf "directory name: "
-    read ans
-    mkdir $ans
+    printf "directory name: "
+        read ans
+        mkdir $ans
 }}
 cmd touch ${{
-  printf "file name: "
-    read ans
-    $EDITOR $ans
+    printf "file name: "
+        read ans
+        $EDITOR $ans
 }}
 
 # Keymaps and options
