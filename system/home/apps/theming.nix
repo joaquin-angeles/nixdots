@@ -11,15 +11,15 @@
     };
 
     # Icon theme
-    home.file.".local/share/icons/Papirus".source = ../icons/Papirus;
-    home.file."Pictures/backgrounds".source = ../backgrounds;
+    home.file.".local/share/icons/Papirus".source = ../../../icons/Papirus;
+    home.file."Pictures/backgrounds".source = ../../../backgrounds;
 
     # GTK theming
     gtk = {
         enable = true;
         theme = {
             package = pkgs.gruvbox-gtk-theme;
-            name = "Gruvbox-Dark:dark";
+            name = "Gruvbox-Dark";
         };
 
         # Enable dark theme
