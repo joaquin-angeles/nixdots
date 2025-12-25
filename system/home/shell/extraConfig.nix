@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    programs.zsh.initExtraFirst = ''
+    programs.zsh.initContent = lib.mkBefore ''
         # P10K instant prompt
         if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${USER}.zsh" ]]; then
             source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${USER}.zsh"
