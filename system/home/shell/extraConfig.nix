@@ -15,23 +15,24 @@
             ''
                 # P10K configuration
                 source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme # Prompt
-                [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+                [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
                 # Cursor and title configuration
-                precmd() {
+                autoload -Uz add-zsh-hook
+                add-zsh-hook precmd () {
                     printf '\e[1 q'
                     print -Pn "\e]0;%n@%m: %~\a"
                 }
 
                 # Better FZF (faster preview)
                 function ff() {
-                  command fzf --preview '
-                    if [ -d {} ]; then
-                        eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
-                    else
-                        bat --color=always {}
-                    fi
-                  '
+                    command fzf --preview '
+                        if [ -d {} ]; then
+                            command -v eza >/dev/null && eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
+                        else
+                            command -v bat >/dev/null && bat --color=always {} || sed -n "1,200p" {}
+                        fi
+                    '
                 }
             ''
         ];
