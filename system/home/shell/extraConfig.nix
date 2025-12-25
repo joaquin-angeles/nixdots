@@ -30,7 +30,7 @@
                         if [ -d {} ]; then
                             command -v eza >/dev/null && eza --icons always --group-directories-first --git --color=always {} || ls -lh {}
                         else
-                            command -v bat >/dev/null && bat --color=always {} || sed -n "1,200p" {}
+                            command -v bat >/dev/null && bat --color=always {} || cat {}
                         fi
                     '
                 }
