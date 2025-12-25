@@ -29,6 +29,7 @@
         plugins = [ pkgs.rofi-emoji ];
     };
 
+    # Btop
     programs.btop = {
         enable = true;
 
