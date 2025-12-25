@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./apps/flatpaks.nix
-    ./apps/fonts.nix
-    ./apps/packages.nix
-    ./apps/programs.nix
-    ./apps/scripts.nix
-  ];
+    imports = [
+        ./apps/flatpaks.nix
+        ./apps/fonts.nix
+        ./apps/packages.nix
+        ./apps/programs.nix
+        ./apps/scripts.nix
+    ];
+
+    programs.nh.enable = true; # NH
 }

@@ -11,6 +11,7 @@
         gruvbox-kvantum
         hyprlock
         hyprpicker
+        impala
         imv
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         kdePackages.qt6ct
@@ -22,14 +23,12 @@
         mako
         ripgrep
         stow
-        unstable.hyprshot
-        unstable.impala
+        sunsetr
+        swayosd
         unstable.neovim
-        unstable.sunsetr
-        unstable.swayosd
-        unstable.wiremix
         waybar
         wbg
+        wiremix
         zellij
     ];
 }
