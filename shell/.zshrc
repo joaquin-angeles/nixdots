@@ -1,10 +1,10 @@
-bindkey -e
-
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey -e # Set Emacs keybinds
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # Autosuggestions
@@ -37,8 +37,10 @@ function yy() {
 }
 
 # Set window titles
-precmd() {
-    print -Pn "\e]0;%n@%m:%~\a"
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd () {
+    printf '\e[1 q'
+    print -Pn "\e]0;%n@%m: %~\a"
 }
 
 # Compinit
