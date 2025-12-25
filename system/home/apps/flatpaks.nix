@@ -11,6 +11,7 @@
             "dev.vencord.Vesktop"
             "org.chromium.Chromium"
             "org.gimp.GIMP"
+            "org.onlyoffice.desktopeditors"
         ];
 
         update.onActivation = true;
