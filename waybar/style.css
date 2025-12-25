@@ -2,13 +2,13 @@
 
 window#waybar {
     font: 13.5pt "JetBrainsMono Nerd Font Propo";
-    background-color: @bg;
+    background-color: rgba(29, 32, 33,0.8);
     /* border-bottom: 1px solid darker(#494949); */
     color: @fg;
 }
 
 #sys-info {
-    background-color: #2b2d2d;
+    background-color: @bright-bg;
     margin-top: 2pt;
     margin-bottom: 2pt;
     border-radius: 8px;
@@ -16,7 +16,7 @@ window#waybar {
 
 #clock {
     /*
-background-color: #2b2d2d;
+background-color: @bright-bg;
 margin-top: 2pt;
 margin-bottom: 2pt;
 border: 1px solid #404040;
@@ -90,7 +90,7 @@ border-radius: 8px;
 }
 
 #workspaces {
-    background-color: #2b2d2d;
+    background-color: @bright-bg;
     margin-top: 2pt;
     margin-bottom: 2pt;
     margin-left: 5pt;
