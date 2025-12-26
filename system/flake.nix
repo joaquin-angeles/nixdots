@@ -1,5 +1,5 @@
 {
-    description = "Joaquin's Gruvy Nix";
+    description = "Gruvvy NixOS";
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
