@@ -55,4 +55,4 @@ All system and user configurations are located in flake.nix, system/core, and sy
 ![Rofi/Wofi launcher](./previews/rofi.png)
 
 ### GUI applications
-![GUI](./previews/gtk&qt.png)
+![GUI](./previews/gui.png)
