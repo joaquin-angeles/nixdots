@@ -6,7 +6,6 @@
         celluloid
         cliphist
         file-roller
-        gruvbox-kvantum
         hyprlock
         hyprpicker
         hyprshot

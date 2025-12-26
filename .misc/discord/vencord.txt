@@ -1,9 +1,0 @@
-Plugin list:
-- BetterFolders
-- ClientTheme
-- Crash Handler
-- Custom RPC
-- FakeNitro
-- GameActivityToggle
-- ReadAllNotificationsButton
-- WebScreenShareFixes

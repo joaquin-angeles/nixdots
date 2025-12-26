@@ -1,7 +1,5 @@
 # Core theming
 export GTK_THEME=Adwaita-Mono
-export GTK_ICON_THEME="Papirus"
-export XDG_ICON_THEME="Papirus"
 export QT_QPA_PLATFORMTHEME=qt6ct
 export XCURSOR_THEME=Bibata-Modern-Ice
 export XCURSOR_SIZE=24

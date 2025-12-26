@@ -16,11 +16,11 @@
     xdg.mimeApps = {
         enable = true;
         defaultApplications = {
-            "text/html" = "app.zen_browser.zen.desktop";
-            "x-scheme-handler/http" = "app.zen_browser.zen.desktop";
-            "x-scheme-handler/https" = "app.zen_browser.zen.desktop";
-            "x-scheme-handler/about" = "app.zen_browser.zen.desktop";
-            "x-scheme-handler/unknown" = "app.zen_browser.zen.desktop";
+            "text/html" = "zen.desktop";
+            "x-scheme-handler/http" = "zen.desktop";
+            "x-scheme-handler/https" = "zen.desktop";
+            "x-scheme-handler/about" = "zen.desktop";
+            "x-scheme-handler/unknown" = "zen.desktop";
 
             "text/plain" = "nvim.desktop";
             "text/markdown" = "nvim.desktop";
