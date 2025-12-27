@@ -13,17 +13,19 @@ M.base46 = {
     },
 }
 
+-- Dashboard
 M.nvdash = {
     load_on_startup = true,
 
+    -- Modules
     buttons = {
-        { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
-        { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
-        { txt = "󰈔  New File", keys = "fn", cmd = "enew" },
-        { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
-        { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
-        { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
-        { txt = "󰚥  Plugins", keys = "pl", cmd = "Lazy" },
+        { txt = "󰈔  New File", keys = "fn", cmd = "enew" }, -- Make new file
+        { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" }, -- Fuzzy file search
+        { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" }, -- Recent file search (fuzzy)
+        { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" }, -- Word search (fuzzy)
+        { txt = "󰚥  Plugins", keys = "pl", cmd = "Lazy" }, -- Plugin manager (Lazy)
+        { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" }, -- Keybind cheatsheet
+        { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" }, -- Theme picker
 
         { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 
@@ -41,6 +43,8 @@ M.nvdash = {
         { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
     },
 }
+
+-- Bufferline
 M.ui = {
       tabufline = {
          lazyload = false
