@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, ... }:
 
 {
     boot.blacklistedKernelModules = [ "nouveau" ]; # ❌ nouveau

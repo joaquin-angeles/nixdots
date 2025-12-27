@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     # powerManagement.powertop.enable = true; # Powertop
