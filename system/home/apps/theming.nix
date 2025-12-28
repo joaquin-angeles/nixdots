@@ -21,16 +21,17 @@
             package = pkgs.gruvbox-gtk-theme;
         };
 
-    iconTheme = {
-      name = "Gruvbox-Plus-Dark";
-      package = pkgs.gruvbox-plus-icons;
-    };
+        iconTheme = {
+            name = "Gruvbox-Plus-Dark";
+            package = pkgs.gruvbox-plus-icons;
+        };
 
         # Enable dark theme
-        gtk3.extraConfig = {
-            gtk-application-prefer-dark-theme = true;
-        };
+        gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+        gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
     };
+
+    # GTK4 dark theme
     dconf = {
         enable = true;
         settings = {
@@ -61,11 +62,7 @@
 
     home.activation.flatpakGtkTheme = config.lib.dag.entryAfter ["writeBoundary"] ''
         $DRY_RUN_CMD mkdir -p $HOME/.local/share/themes
+        $DRY_RUN_CMD ln -sfn ${pkgs.adw-gtk3}/share/themes/* $HOME/.local/share/themes/
         $DRY_RUN_CMD ln -sfn ${pkgs.gruvbox-gtk-theme}/share/themes/* $HOME/.local/share/themes/
-    '';
-
-    home.activation.flatpakIconTheme = config.lib.dag.entryAfter ["writeBoundary"] ''
-        $DRY_RUN_CMD mkdir -p $HOME/.local/share/icons
-        $DRY_RUN_CMD ln -sfn ${pkgs.gruvbox-plus-icons}/share/icons/* $HOME/.local/share/icons/
     '';
 }

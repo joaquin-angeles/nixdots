@@ -6,6 +6,9 @@
     home.homeDirectory = "/home/user";
     home.stateVersion = "25.05";
 
+    # System correction
+    systemd.user.systemctlPath = "/run/current-system/sw/bin/systemctl";
+
     # Modules
     imports = [
         # Configurations

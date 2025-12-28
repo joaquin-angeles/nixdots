@@ -7,13 +7,13 @@
         # Installed flatpaks
         packages = [
             "app.zen_browser.zen" # Default browser
-            "com.github.tchx84.Flatseal" # Flatpak settings
+            "com.github.tchx84.Flatseal" # Permissions manager
             "com.obsproject.Studio" # Screen recording software
             # "com.usebottles.bottles" # Windows applications
             "com.vysp3r.ProtonPlus" # Games compat tool
             "com.spotify.Client" # Music streaming
-            "net.lutris.Lutris"
             "dev.vencord.Vesktop" # Discord / Communication
+            # "net.lutris.Lutris"
             "org.chromium.Chromium" # Progressive web apps
             "org.libreoffice.LibreOffice" # Office suite
             "org.gimp.GIMP" # Photo editing
@@ -21,5 +21,54 @@
 
         update.onActivation = true; # Update every rebuild
         update.auto.enable = true; # Scheduled updating
+    };
+
+    # Settings
+    services.flatpak.overrides = {
+
+        # Global options
+        global = {
+
+            # Environmental variables
+            Environment = {
+                "GTK_THEME" = "Gruvbox-Dark"; # Set GTK theme
+                "GTK_APPLICATION_PREFER_DARK_THEME" = "1"; # Enable dark mode
+            };
+
+            # Device access
+            Context = {
+                devices = [ "dri" ]; # GPU access
+            };
+
+            # File access
+            Context.filesystems = [
+                "~/.local/share/fonts:ro" # Access to fonts
+                "~/.local/share/themes:ro" # Access to themes
+                "/nix/store:ro"
+                "/run:ro"
+                "xdg-config/gtk-3.0:ro"
+                "xdg-config/gtk-4.0:ro"
+            ];
+        };
+
+        # Libadwaita themes for badly themed packages
+        "app.zen_browser.zen" = {
+            Environment = {
+                "GTK_THEME" = "adw-gtk3-dark";
+            };
+        };
+
+        "com.github.tchx84.Flatseal" = {
+            Environment = {
+                "GTK_THEME" = "adw-gtk3-dark";
+            };
+        };
+
+        # Vesktop config
+        "dev.vencord.Vesktop" = {
+            Context.filesystems = [
+                "home"
+            ];
+        };
     };
 }

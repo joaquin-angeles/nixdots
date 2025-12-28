@@ -3,6 +3,7 @@
 {
     # User packages
     home.packages = with pkgs; [
+        adw-gtk3
         celluloid
         cliphist
         file-roller
