@@ -23,7 +23,6 @@ M.nvdash = {
         { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" }, -- Fuzzy file search
         { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" }, -- Recent file search (fuzzy)
         { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" }, -- Word search (fuzzy)
-        { txt = "󰚥  Plugins", keys = "pl", cmd = "Lazy" }, -- Plugin manager (Lazy)
         { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" }, -- Keybind cheatsheet
         { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" }, -- Theme picker
         { txt = "󰍃  Leave / Quit", keys = "qa", cmd = "qa" }, -- Make new file
