@@ -7,7 +7,7 @@
             (lib.mkBefore ''
                 # P10K instant prompt
                 if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-${config.home.username}.zsh" ]]; then
-                  source "${config.xdg.cacheHome}/p10k-instant-prompt-${config.home.username}.zsh"
+                    source "${config.xdg.cacheHome}/p10k-instant-prompt-${config.home.username}.zsh"
                 fi
             '')
 
