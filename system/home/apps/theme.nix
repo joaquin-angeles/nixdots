@@ -11,8 +11,8 @@
     };
 
     # Vencord theme
-    home.file."..config/vesktop/themes/midnight-gruvbox.css". = ../../../vencord/themes/midnight-gruvbox.css;
-    home.file.".var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-gruvbox.css". = ../../../vencord/themes/midnight-gruvbox.css;
+    home.file."..config/vesktop/themes/midnight-gruvbox.css".source = ../../../vencord/themes/midnight-gruvbox.css;
+    home.file.".var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-gruvbox.css".source = ../../../vencord/themes/midnight-gruvbox.css;
 
     # Wallpaper
     home.file."Pictures/backgrounds".source = ../../../backgrounds;
