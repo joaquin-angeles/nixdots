@@ -45,10 +45,10 @@ M.nvdash = {
 }
 
 -- Bufferline
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.ui = {
+    tabufline = {
+        lazyload = false
+    }
+}
 
 return M
