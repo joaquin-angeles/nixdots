@@ -10,7 +10,11 @@
         size = 24;
     };
 
-    # Icon theme
+    # Vencord theme
+    home.file."..config/vesktop/themes/midnight-gruvbox.css". = ../../../vencord/themes/midnight-gruvbox.css;
+    home.file.".var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-gruvbox.css". = ../../../vencord/themes/midnight-gruvbox.css;
+
+    # Wallpaper
     home.file."Pictures/backgrounds".source = ../../../backgrounds;
 
     # GTK theming
@@ -63,8 +67,18 @@
         $DRY_RUN_CMD ${pkgs.fontconfig}/bin/fc-cache -fv
     '';
 
-    home.activation.flatpakGtkTheme = config.lib.dag.entryAfter ["writeBoundary"] ''
+    home.activation.flatpakGtkThemes = config.lib.dag.entryAfter ["writeBoundary"] ''
         $DRY_RUN_CMD mkdir -p $HOME/.local/share/themes
-        $DRY_RUN_CMD ln -sfn ${pkgs.gruvbox-gtk-theme}/share/themes/* $HOME/.local/share/themes/
+
+        # Define the theme packages to link
+        THEME_PKGS=("${pkgs.gruvbox-gtk-theme}" "${pkgs.adw-gtk3}")
+
+        for pkg in "''${THEME_PKGS[@]}"; do
+            if [ -d "$pkg/share/themes" ]; then
+                for theme in "$pkg/share/themes/"*; do
+                    $DRY_RUN_CMD ln -sfn "$theme" "$HOME/.local/share/themes/"
+                done
+            fi
+        done
     '';
 }
