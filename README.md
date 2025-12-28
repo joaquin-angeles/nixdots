@@ -1,4 +1,4 @@
-# Joaquin's Gruvy NixdOtS
+# Joaquin's Gruvvy NixOS dotfiles
 (Run Super, shift + SPC to open the cheatsheet)
 
 A *modern, extensible* **Hyprland/Wayland** configuration for NixOS that utilizes the **Gruvbox** colorscheme.
