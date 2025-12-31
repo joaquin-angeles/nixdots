@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 image() {
     geometry="$(($(($2-2)) * 75 / 100))x$(($3 * 75 / 100))"

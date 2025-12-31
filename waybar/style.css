@@ -23,14 +23,14 @@ margin-bottom: 2pt;
 border: 1px solid #404040;
 border-radius: 8px;
 */
-    padding-left: 6pt;
-    padding-right: 2pt;
+    padding-left: 10pt;
+    padding-right: 5.5pt;
 }
 
 /* Custom menu section */
 #custom-menu {
-    margin-left: 5pt;
-    margin-right: 2pt;
+    margin-left: 8pt;
+    margin-right: 5pt;
     font-size: 15pt;
     color: @blue;
 }
@@ -42,7 +42,7 @@ border-radius: 8px;
     margin-top: 2pt;
     margin-bottom: 2pt;
     border-radius: 8px;
-    margin-right: 3pt;
+    margin-right: 8pt;
     margin-left: 5pt;
     padding-left: 6pt;
     padding-right: 6pt;
@@ -78,8 +78,8 @@ border-radius: 8px;
 
 /* System tray */
 #tray {
-    padding-left: 5pt;
-    padding-right: 6pt;
+    padding-left: 2pt;
+    padding-right: 5pt;
 }
 
 /* Window title or active window module */
@@ -102,7 +102,7 @@ border-radius: 8px;
 
 /* Workspaces buttons */
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 5px;
     color: @fg;
 }
 
