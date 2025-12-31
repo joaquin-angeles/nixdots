@@ -4,28 +4,31 @@
     imports = [
         ./shell/aliases.nix
         ./shell/extraConfig.nix # Functions
+        ./shell/binds.nix # Keybinds
 
         # Shell integrations
-        ./shell/integrations/bat.nix
-        ./shell/integrations/eza.nix
-        ./shell/integrations/fd.nix
-        ./shell/integrations/fzf.nix
-        ./shell/integrations/nom.nix
-        ./shell/integrations/ripgrep.nix
-        ./shell/integrations/yazi.nix
-        ./shell/integrations/zoxide.nix
+        ./shell/integrations/bat.nix     # Better cat
+        ./shell/integrations/eza.nix     # Better ls
+        ./shell/integrations/fd.nix      # Better find
+        ./shell/integrations/fzf.nix     # Fuzzy finger
+        ./shell/integrations/nom.nix     # Better Nix outputs
+        ./shell/integrations/ripgrep.nix # Better grep
+        ./shell/integrations/yazi.nix    # File manager
+        ./shell/integrations/zoxide.nix  # Better cd
     ];
 
     # Base zsh configuration
     programs.zsh = {
-        defaultKeymap = "emacs"; # Use Emacs binds
-        enable = true; # Enable zsh for configuration
+        defaultKeymap = "emacs"; # Emacs binds
+        enable = true;
 
         # Plugins
         completionInit = "autoload -Uz compinit && compinit -C";
         syntaxHighlighting.enable = true; # Colorize your shell
         autosuggestion.enable = true; # Autosuggestions
         enableCompletion = true; # Auto-completions
+
+        # Powerlevel10K
         plugins = [
             {
                 name = "powerlevel10k";
@@ -36,10 +39,10 @@
 
         # History configuration
         history = {
-            size = 5000;
+            size = 5000; # HISTSIZE
             save = 5000;
             share = true;
-            ignoreSpace = true; # Don't include statements that start with a space
+            ignoreSpace = true; # Ignore commands that start with a space
             extended = true;
             ignorePatterns = [ "ls" "cd" "pwd" "ls *" "cd *" "pwd *" ]; # Ignore frequent/redundant commands
 

@@ -5,17 +5,19 @@
         initContent = lib.mkMerge [
             # P10K instant prompt
             (lib.mkBefore ''
+                # stty intr "^G"
+
                 # P10K instant prompt
                 if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-${config.home.username}.zsh" ]]; then
                     source "${config.xdg.cacheHome}/p10k-instant-prompt-${config.home.username}.zsh"
                 fi
             '')
 
-            # Everything else
+            # Functions and integrations
             ''
                 # P10K configuration
-                source $HOME/.zsh/plugins/powerlevel10k/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-                [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+                source ${config.home.homeDirectory}/.zsh/plugins/powerlevel10k/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+                [[ ! -f ${config.home.homeDirectory}/.p10k.zsh ]] || source ${config.home.homeDirectory}/.p10k.zsh
 
                 # Cursor and title configuration
                 autoload -Uz add-zsh-hook
