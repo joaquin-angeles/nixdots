@@ -5,7 +5,7 @@ cat <<EOF
 SUPER + Return        → Open terminal (Alacritty)
 SUPER + Space         → App launcher (Rofi)
 SUPER + B             → Browser (Zen)
-SUPER + E             → File manager (Nautilus)
+SUPER + E             → File manager (Nemo)
 SUPER + .             → Emoji picker
 SUPER + V             → Clipboard manager (Cliphist)
 SUPER + R             → Reload Hyprland config
