@@ -4,10 +4,14 @@
     # eza
     programs.eza = {
         enable = true;
+        enableZshIntegration = false;
         icons = "always"; # Always show icons
         extraOptions = [
-            "--group-directories-first"
+            "--long"
+            "--header"
+            "--group"
             "--git"
+            "--group-directories-first"
         ];
     };
 }

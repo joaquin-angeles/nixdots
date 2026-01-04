@@ -19,7 +19,7 @@
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
         mako
-        nemo-with-extensions
+        nautilus 
         nwg-look
         ripgrep
         stow

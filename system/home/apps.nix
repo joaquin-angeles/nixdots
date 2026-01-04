@@ -48,8 +48,8 @@
             "application/x-7z-compressed" = "org.gnome.FileRoller.desktop";
             "application/x-rar" = "org.gnome.FileRoller.desktop";
 
-            "inode/directory" = "nemo.desktop";
-            "x-directory/normal" = "nemo.desktop";
+            "inode/directory" = "org.gnome.Nautilus.desktop";
+            "x-directory/normal" = "org.gnome.Nautilus.desktop";
         };
     };
 }
