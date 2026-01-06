@@ -25,13 +25,13 @@
 
     "network": {
         "interface": "wlan0",
-        "format": "{icon} {essid}",
+        "format": "{icon}",
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀",
-        "tooltip-format": "Network speed: {signalStrength}%",
+        "tooltip-format": "Connected to {essid}\nNetwork speed: {signalStrength}%",
         "on-click": "alacritty --title='Network Manager' -e impala",
     },
 
@@ -49,7 +49,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
         "format-muted": "󰖁",
         "format-icons": {
             "default": [
@@ -60,21 +60,21 @@
             ]
         },
         "on-click": "alacritty --title='Volume Control' -e wiremix",
-        "tooltip-format": "Device: {desc}",
+        "tooltip-format": "Device: {desc}\nVolume: {volume}%",
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
+        "format": "{icon}",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-full": "󱈑 {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-warning": "󰂃 {capacity}%",
+        "format-full": "󱈑",
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
         "tooltip": true,
-        "tooltip-format": "Status: Discharging",
-        "tooltip-format-charging": "Status: Charging",
-        "tooltip-format-full": "Status: Fully charged",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Discharging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Charging",
+        "tooltip-format": "Battery: {capacity}%\nStatus: Fully charged",
         "interval": 1,
         "states": {
             "good": 80,

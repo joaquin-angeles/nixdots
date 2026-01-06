@@ -19,22 +19,7 @@
 
             # Fonts' config
             # monospace = JBM NF Mono, btw
-            font = {
-
-                normal.family = "monospace";
-                normal.style = "Regular";
-
-                bold.family = "monospace";
-                bold.style = "Bold";
-
-                italic.family = "monospace";
-                italic.style = "Italic";
-
-                bold_italic.family = "monospace";
-                bold_italic.style = "Bold Italic";
-
-                size = 13.5;
-            };
+            font.size = 13.5;
 
             # Environment variables
             env = {

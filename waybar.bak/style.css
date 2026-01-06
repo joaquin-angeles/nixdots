@@ -9,7 +9,7 @@ window#waybar {
 }
 
 #sys-info {
-    /* background-color: @bright-bg; */
+    background-color: @bright-bg;
     margin-top: 2pt;
     margin-bottom: 2pt;
     border-radius: 8px;
@@ -24,7 +24,7 @@ border: 1px solid #404040;
 border-radius: 8px;
 */
     padding-left: 10pt;
-    padding-right: 6pt;
+    padding-right: 5.5pt;
 }
 
 /* Custom menu section */
@@ -38,34 +38,34 @@ border-radius: 8px;
 /* Power icon/module */
 #custom-power {
     color: @red;
-    /* background-color: darker(#753431); */
-    font-size: 15pt;
+    background-color: darker(#753431);
     margin-top: 2pt;
     margin-bottom: 2pt;
     border-radius: 8px;
-    /* margin-right: 8pt;
-    margin-left: 5pt; */
+    margin-right: 8pt;
+    margin-left: 5pt;
     padding-left: 6pt;
-    padding-right: 10pt;
+    padding-right: 6pt;
     /* color: @red; */
 }
 
 /* Network module */
 #network {
     color: @blue;
-    margin-right: 13pt;
+    margin-right: 11pt;
     padding-left: 6pt;
 }
 
 /* PulseAudio module */
 #pulseaudio {
     color: @magenta;
-    margin-right: 14pt;
+    font-size: 15pt;
+    margin-right: 11.5pt;
 }
 
 #battery {
     color: @green;
-    padding-right: 2pt;
+    padding-right: 7pt;
 }
 
 #battery.low {
