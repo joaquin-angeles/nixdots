@@ -72,9 +72,9 @@
         "format-charging": "󰂄",
         "format-warning": "󰂃",
         "tooltip": true,
-        "tooltip-format": "Battery: {capacity}%\nStatus: Discharging",
-        "tooltip-format": "Battery: {capacity}%\nStatus: Charging",
-        "tooltip-format": "Battery: {capacity}%\nStatus: Fully charged",
+        "tooltip-format": "Status: Discharging\nBattery: {capacity}%",
+        "tooltip-format-charging": "Status: Charging\nBattery: {capacity}%",
+        "tooltip-format-full": "Status: Fully charged\nBattery: {capacity}%",
         "interval": 1,
         "states": {
             "good": 80,

@@ -2,7 +2,8 @@
     "include": "./modules.json",
     "layer": "top",
     "position": "top",
-    "height": 24,
+    // "position": "bottom",
+    "height": 0,
     "spacing": 0,
     "modules-left": [
         "custom/menu",
