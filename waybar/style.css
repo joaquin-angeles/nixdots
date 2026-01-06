@@ -10,8 +10,8 @@ window#waybar {
 
 #sys-info {
     /* background-color: @bright-bg; */
-    margin-top: 2pt;
-    margin-bottom: 2pt;
+    /* margin-top: 4pt;
+    margin-bottom: 4pt; */
     border-radius: 8px;
 }
 
@@ -23,8 +23,9 @@ margin-bottom: 2pt;
 border: 1px solid #404040;
 border-radius: 8px;
 */
+    color: @yellow;
     padding-left: 10pt;
-    padding-right: 6pt;
+    padding-right: 10pt;
 }
 
 /* Custom menu section */
@@ -65,16 +66,12 @@ border-radius: 8px;
 
 #battery {
     color: @green;
-    padding-right: 2pt;
+    padding-right: 4pt;
 }
 
-#battery.low {
-    color: @yellow;
-}
+#battery.low { color: @yellow; }
 
-#battery.critical {
-    color: @red;
-}
+#battery.critical { color: @red; }
 
 /* System tray */
 #tray {
@@ -91,28 +88,26 @@ border-radius: 8px;
 }
 
 #workspaces {
-    background-color: @bright-bg;
-    margin-top: 2pt;
-    margin-bottom: 2pt;
+    background-color: lighter(@bright-bg);
+    margin-top: 4pt;
+    margin-bottom: 4pt;
     margin-left: 5pt;
     padding-left: 4pt;
     padding-right: 4pt;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 /* Workspaces buttons */
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
     color: @fg;
 }
 
-#workspaces button.empty {
+/* #workspaces button.empty {
     color: #4d5051;
-}
+} */
 
-#workspaces button.active {
-    color: @cyan;
-}
+#workspaces button.active { color: @cyan; }
 
 #workspaces button:hover {
     color: darker(@cyan);

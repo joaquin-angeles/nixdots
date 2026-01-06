@@ -13,7 +13,5 @@
     "modules-right": [
         "group/sys-info",
         "clock",
-        "custom/power",
-        "tray",
     ],
 }

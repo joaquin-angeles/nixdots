@@ -8,7 +8,8 @@
         "format": "{icon}",
         "format-icons": {
             "active": "",
-            "default": "",
+            "default": "",
+            "empty": "",
             "7": "7",
             "8": "8",
             "9": "9",
@@ -91,7 +92,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "󰅐 {:%H:%M}",
         "tooltip": true,
         "tooltip-format": "{:%b %d, %Y on a %A}",
         "interval": 1,
@@ -109,11 +110,6 @@
             "pulseaudio",
             "battery"
         ]
-    },
-
-    "custom/expand-icon": {
-        "format": "…",
-        "tooltip": false
     },
 
     "custom/power": {
