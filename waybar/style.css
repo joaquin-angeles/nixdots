@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13.5pt "JetBrainsMono Nerd Font Propo";
+    font: 13.5pt "Rubik";
     background-color: @bg;
     /* background-color: rgba(29, 32, 33,0.8); */
     /* border-bottom: 1px solid darker(#494949); */
@@ -23,6 +23,7 @@ margin-bottom: 2pt;
 border: 1px solid #404040;
 border-radius: 8px;
 */
+    padding-top: 1pt;
     padding-left: 10pt;
     padding-right: 5.5pt;
 }
@@ -45,14 +46,14 @@ border-radius: 8px;
     margin-right: 8pt;
     margin-left: 5pt;
     padding-left: 6pt;
-    padding-right: 6pt;
+    padding-right: 7pt;
     /* color: @red; */
 }
 
 /* Network module */
 #network {
     color: @blue;
-    padding-right: 11pt;
+    padding-right: 15pt;
     padding-left: 8pt;
 }
 
@@ -60,7 +61,7 @@ border-radius: 8px;
 #pulseaudio {
     color: @magenta;
     font-size: 15pt;
-    margin-right: 11.5pt;
+    margin-right: 13pt;
 }
 
 #battery {
@@ -85,6 +86,7 @@ border-radius: 8px;
 /* Window title or active window module */
 #window {
     /* color: #9F8F72; */
+    padding-top: 1pt;
     padding-left: 6pt;
     padding-right: 6pt;
 }
@@ -93,9 +95,9 @@ border-radius: 8px;
     background-color: @bright-bg;
     margin-top: 3pt;
     margin-bottom: 3pt;
-    margin-left: 5pt;
-    padding-left: 4pt;
-    padding-right: 4pt;
+    margin-left: 10pt;
+    padding-left: 2pt;
+    padding-right: 5.5pt;
     border-radius: 12pt;
 }
 
