@@ -3,7 +3,7 @@
     "layer": "top",
     "position": "top",
     // "position": "bottom",
-    "height": 0,
+    "height": 35,
     "spacing": 0,
     "modules-left": [
         "custom/menu",
@@ -11,7 +11,10 @@
     ],
     // "modules-center": [ "hyprland/window", ],
     "modules-right": [
-        "group/sys-info",
+        "network",
+        "pulseaudio",
+        "battery",
         "clock",
+        "tray",
     ],
 }

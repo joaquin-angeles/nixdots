@@ -79,8 +79,8 @@
         "interval": 1,
         "states": {
             "good": 80,
-            "low": 30,
-            "critical": 19,
+            "low": 50,
+            "critical": 29,
         },
     },
 
@@ -125,15 +125,4 @@
         "tooltip-format": "drun",
         "on-click": "rofi -show drun"
     },
-
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "interval": 1,
-        "on-click": "hyprsunset -t 4000",
-        "on-scroll-up": "brightnessctl s +5%",
-        "on-scroll-down": "brightnessctl s 5%-",
-        "tooltip": true,
-        "tooltip-format": "Current brightness: {percent}%"
-    }
 }
