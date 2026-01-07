@@ -9,9 +9,9 @@ window#waybar {
 }
 
 #sys-info {
-    background-color: @bright-bg;
-    margin-top: 2pt;
-    margin-bottom: 2pt;
+    /* background-color: @bright-bg; */
+    /* margin-top: 4pt;
+    margin-bottom: 4pt; */
     border-radius: 8px;
 }
 
@@ -23,58 +23,55 @@ margin-bottom: 2pt;
 border: 1px solid #404040;
 border-radius: 8px;
 */
-    padding-left: 10pt;
-    padding-right: 5.5pt;
+    color: @yellow;
+    padding-left: 9pt;
+    padding-right: 10pt;
 }
 
 /* Custom menu section */
 #custom-menu {
     margin-left: 8pt;
-    margin-right: 5pt;
-    font-size: 15pt;
+    margin-right: 6pt;
+    font-size: 16pt;
     color: @blue;
 }
 
 /* Power icon/module */
 #custom-power {
     color: @red;
-    background-color: darker(#753431);
+    /* background-color: darker(#753431); */
+    font-size: 15pt;
     margin-top: 2pt;
     margin-bottom: 2pt;
     border-radius: 8px;
-    margin-right: 8pt;
-    margin-left: 5pt;
+    /* margin-right: 8pt;
+    margin-left: 5pt; */
     padding-left: 6pt;
-    padding-right: 6pt;
+    padding-right: 10pt;
     /* color: @red; */
 }
 
 /* Network module */
 #network {
     color: @blue;
-    margin-right: 11pt;
+    margin-right: 13pt;
     padding-left: 6pt;
 }
 
 /* PulseAudio module */
 #pulseaudio {
     color: @magenta;
-    font-size: 15pt;
-    margin-right: 11.5pt;
+    margin-right: 14pt;
 }
 
 #battery {
     color: @green;
-    padding-right: 7pt;
+    padding-right: 4pt;
 }
 
-#battery.low {
-    color: @yellow;
-}
+#battery.low { color: @yellow; }
 
-#battery.critical {
-    color: @red;
-}
+#battery.critical { color: @red; }
 
 /* System tray */
 #tray {
@@ -92,27 +89,25 @@ border-radius: 8px;
 
 #workspaces {
     background-color: @bright-bg;
-    margin-top: 2pt;
-    margin-bottom: 2pt;
+    margin-top: 3pt;
+    margin-bottom: 3pt;
     margin-left: 5pt;
     padding-left: 4pt;
     padding-right: 4pt;
-    border-radius: 8px;
+    border-radius: 12pt;
 }
 
 /* Workspaces buttons */
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
     color: @fg;
 }
 
-#workspaces button.empty {
+/* #workspaces button.empty {
     color: #4d5051;
-}
+} */
 
-#workspaces button.active {
-    color: @cyan;
-}
+#workspaces button.active { color: @cyan; }
 
 #workspaces button:hover {
     color: darker(@cyan);

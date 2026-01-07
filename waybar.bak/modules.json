@@ -8,7 +8,8 @@
         "format": "{icon}",
         "format-icons": {
             "active": "",
-            "default": "",
+            "default": "",
+            "empty": "",
             "7": "7",
             "8": "8",
             "9": "9",
@@ -25,13 +26,13 @@
 
     "network": {
         "interface": "wlan0",
-        "format": "{icon}",
+        "format": "{icon} {essid}",
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
         "format-ethernet": "󰈀",
-        "tooltip-format": "Connected to {essid}\nNetwork speed: {signalStrength}%",
+        "tooltip-format": "Network speed: {signalStrength}%",
         "on-click": "alacritty --title='Network Manager' -e impala",
     },
 
@@ -49,7 +50,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-muted": "󰖁",
         "format-icons": {
             "default": [
@@ -60,26 +61,26 @@
             ]
         },
         "on-click": "alacritty --title='Volume Control' -e wiremix",
-        "tooltip-format": "Device: {desc}\nVolume: {volume}%",
+        "tooltip-format": "Device: {desc}",
     },
 
     "battery": {
-        "format": "{icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-full": "󱈑",
-        "format-charging": "󰂄",
-        "format-warning": "󰂃",
+        "format-full": "󱈑 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-warning": "󰂃 {capacity}%",
         "tooltip": true,
-        "tooltip-format": "Status: Discharging\nBattery: {capacity}%",
-        "tooltip-format-charging": "Status: Charging\nBattery: {capacity}%",
-        "tooltip-format-full": "Status: Fully charged\nBattery: {capacity}%",
+        "tooltip-format": "Status: Discharging",
+        "tooltip-format-charging": "Status: Charging",
+        "tooltip-format-full": "Status: Fully charged",
         "interval": 1,
         "states": {
             "good": 80,
-            "low": 30,
-            "critical": 19,
+            "low": 50,
+            "critical": 29,
         },
     },
 
@@ -91,7 +92,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "󰅐 {:%H:%M}",
         "tooltip": true,
         "tooltip-format": "{:%b %d, %Y on a %A}",
         "interval": 1,
@@ -111,11 +112,6 @@
         ]
     },
 
-    "custom/expand-icon": {
-        "format": "…",
-        "tooltip": false
-    },
-
     "custom/power": {
         "format": "󰐥",
         "tooltip": true,
@@ -129,15 +125,4 @@
         "tooltip-format": "drun",
         "on-click": "rofi -show drun"
     },
-
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "interval": 1,
-        "on-click": "hyprsunset -t 4000",
-        "on-scroll-up": "brightnessctl s +5%",
-        "on-scroll-down": "brightnessctl s 5%-",
-        "tooltip": true,
-        "tooltip-format": "Current brightness: {percent}%"
-    }
 }
