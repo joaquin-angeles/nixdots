@@ -33,4 +33,13 @@
         enable = true; 
         enable32Bit = true;
     };
+
+    # Zram
+    zramSwap = {
+        algorithm = "zstd";
+        enable = true;
+        memoryPercent = 50;
+        priority = 50;
+        swapDevices = 1;
+    };
 }

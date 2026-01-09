@@ -1,14 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    # Modules
-    imports = [
-        ./core/apps.nix
-        ./core/hardware.nix
-        ./core/services.nix
-        /etc/nixos/hardware-configuration.nix
-    ];
-
     # Boot options
     boot.kernelModules = [ "zram" ];
     boot.loader = {
@@ -70,14 +62,5 @@
         extraGroups = [ "wheel" ];
         isNormalUser = true;
         shell = pkgs.zsh;
-    };
-
-    # Zram
-    zramSwap = {
-        algorithm = "zstd";
-        enable = true;
-        memoryPercent = 50;
-        priority = 50;
-        swapDevices = 1;
     };
 }

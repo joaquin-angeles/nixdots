@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
     services.flatpak = {
@@ -13,7 +13,7 @@
         # Installed flatpaks
         packages = [
             "app.zen_browser.zen" # Default browser
-            "com.github.tchx84.Flatseal"
+            # "com.github.tchx84.Flatseal"
             "com.obsproject.Studio" # Screen recording software
             # "com.usebottles.bottles" # Windows applications
             "com.vysp3r.ProtonPlus" # Games compat tool
@@ -58,7 +58,6 @@
             # File access
             Context.filesystems = [
                 "/nix/store:ro"
-                "/run/current-system/sw/:ro"
                 "~/.local/share/fonts:ro" # Access to fonts
                 "~/.local/share/themes:ro" # Access to themes
 

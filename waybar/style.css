@@ -2,8 +2,8 @@
 
 window#waybar {
     font: 13.5pt "Rubik";
-    background-color: @bg;
-    /* background-color: rgba(29, 32, 33,0.8); */
+    /* background-color: @bg; */
+    background-color: rgba(30, 32, 33, 0.8);
     /* border-bottom: 1px solid darker(#494949); */
     color: @fg;
 }
