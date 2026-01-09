@@ -1,10 +1,9 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13.5pt "Rubik";
-    /* background-color: @bg; */
+    font-family: "Rubik", sans-serif;
+    font-size: 13.5pt;
     background-color: rgba(30, 32, 33, 0.8);
-    /* border-bottom: 1px solid darker(#494949); */
     color: @fg;
 }
 
@@ -15,49 +14,27 @@ window#waybar {
     border-radius: 12pt;
 }
 
-#clock {
-    /*
-background-color: @bright-bg;
-margin-top: 2pt;
-margin-bottom: 2pt;
-border: 1px solid #404040;
-border-radius: 8px;
-*/
-    padding-top: 1pt;
-    padding-left: 10pt;
-    padding-right: 5.5pt;
-}
+#clock { padding: 1pt 5.5pt 0 10pt; }
 
-/* Custom menu section */
 #custom-menu {
-    margin-left: 8pt;
-    margin-right: 5pt;
+    margin: 0 5pt 0 8pt;
     font-size: 16pt;
     color: @blue;
 }
 
-/* Power icon/module */
 #custom-power {
     color: @red;
     background-color: darker(#753431);
-    margin-top: 3pt;
-    margin-bottom: 3pt;
+    margin: 3pt 8pt 3pt 5pt;
     border-radius: 12pt;
-    margin-right: 8pt;
-    margin-left: 5pt;
-    padding-left: 6pt;
-    padding-right: 7pt;
-    /* color: @red; */
+    padding: 0 7pt 0 6pt;
 }
 
-/* Network module */
 #network {
     color: @blue;
-    padding-right: 15pt;
-    padding-left: 8pt;
+    padding: 0 15pt 0 8pt;
 }
 
-/* PulseAudio module */
 #pulseaudio {
     color: @magenta;
     font-size: 15pt;
@@ -69,53 +46,26 @@ border-radius: 8px;
     padding-right: 9pt;
 }
 
-#battery.low {
-    color: @yellow;
-}
+#battery.low { color: @yellow; }
 
-#battery.critical {
-    color: @red;
-}
+#battery.critical { color: @red; }
 
-/* System tray */
-#tray {
-    padding-left: 2pt;
-    padding-right: 5pt;
-}
+#tray { padding: 0 5pt 0 2pt; }
 
-/* Window title or active window module */
-#window {
-    /* color: #9F8F72; */
-    padding-top: 1pt;
-    padding-left: 6pt;
-    padding-right: 6pt;
-}
+#window { padding: 1pt 6pt; }
 
 #workspaces {
     background-color: @bright-bg;
-    margin-top: 3pt;
-    margin-bottom: 3pt;
-    margin-left: 10pt;
-    padding-left: 2pt;
-    padding-right: 5.5pt;
+    margin: 3pt 0 3pt 10pt;
+    padding: 0 5.5pt 0 2pt;
     border-radius: 12pt;
 }
 
-/* Workspaces buttons */
 #workspaces button {
     padding: 0 5pt;
     color: @fg;
 }
 
-#workspaces button.empty {
-    color: #4d5051;
-}
+#workspaces button.empty { color: #4d5051; }
 
-#workspaces button.active {
-    color: @cyan;
-}
-
-#workspaces button:hover {
-    color: darker(@cyan);
-    background: transparent;
-}
+#workspaces button.active { color: @cyan; }
