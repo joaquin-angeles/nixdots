@@ -19,7 +19,6 @@
             "com.vysp3r.ProtonPlus" # Games compat tool
             "com.spotify.Client" # Music streaming
             "dev.vencord.Vesktop" # Discord / Communication
-            "io.github.trigg.discover_overlay"
             "io.mrarm.mcpelauncher" # Minecraft
             "net.lutris.Lutris" # Game launcher
             "org.chromium.Chromium" # Progressive web apps
