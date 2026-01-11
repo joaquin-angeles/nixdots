@@ -52,7 +52,7 @@ window#waybar {
 
 #tray { padding: 0 5pt 0 2pt; }
 
-#window { padding: 1pt 6pt; }
+#window { padding-top: 1pt; }
 
 #workspaces {
     background-color: @bright-bg;

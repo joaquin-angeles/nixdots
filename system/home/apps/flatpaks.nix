@@ -20,7 +20,6 @@
             "com.spotify.Client" # Music streaming
             "dev.vencord.Vesktop" # Discord / Communication
             "io.mrarm.mcpelauncher" # Minecraft
-            "net.lutris.Lutris" # Game launcher
             "org.chromium.Chromium" # Progressive web apps
             "org.libreoffice.LibreOffice" # Office suite
             "org.gimp.GIMP" # Photo editing

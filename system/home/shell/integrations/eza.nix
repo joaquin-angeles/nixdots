@@ -9,6 +9,7 @@
         extraOptions = [
             "--git"
             "--group-directories-first"
+            "--header"
         ];
     };
 }
