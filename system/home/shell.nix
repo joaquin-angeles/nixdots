@@ -4,7 +4,7 @@
     imports = [
         ./shell/aliases.nix
         ./shell/extraConfig.nix # Functions
-        ./shell/binds.nix # Keybinds
+        # ./shell/binds.nix # Keybinds
 
         # Shell integrations
         ./shell/integrations/bat.nix     # Better cat
