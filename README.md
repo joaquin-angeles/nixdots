@@ -32,7 +32,7 @@ Almost everything is managed in pure Nix via Home Manager—no scattered config 
 
 # Installation
 
-Clone the repository: `git clone https://github.com/joaquin-angeles/nixdots.git && cd nixdots`
+Clone the repository: `git clone https://github.com/joaquin-angeles/.files.git && cd .files`
 
 Build and switch to the configuration: `sudo nixos-rebuild switch --flake --impure ./system#nixos-btw`
 
