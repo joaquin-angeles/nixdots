@@ -7,9 +7,9 @@ fi
 bindkey -e # Set Emacs keybinds
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # Autosuggestions
-source ~/.p10k/powerlevel10k.zsh-theme # P10K
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Syntax highlighting
+source ./.zsh/plugins/autosuggestions/zsh-autosuggestions.zsh # Autosuggestions
+source ./.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme # Fast prompt
+source ./.zsh/plugins/syntax-highlighting/zsh-syntax-highlighting.zsh # Syntax highlighting
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -53,16 +53,16 @@ else
 fi
 
 # Aliases
-alias -- bat = 'bat --color=always --theme=gruvbox-dark --style=numbers'
-alias -- cat = 'bat --color=always --theme=gruvbox-dark --style=plain'
-alias -- cd = z
-alias -- fzf = ff
-alias -- grep = rg
-alias -- ll = 'eza -lh'
-alias -- lla = 'eza -lha'
-alias -- ls=eza
-alias -- lsa= 'eza -a'
-alias -- vim=nvim
+alias bat = 'bat --color=always --theme=gruvbox-dark --style=numbers'
+alias cat = 'bat --color=always --theme=gruvbox-dark --style=plain'
+alias cd = z
+alias fzf = ff
+alias grep = rg
+alias ll = 'eza -lh'
+alias lla = 'eza -lha'
+alias ls=eza
+alias lsa= 'eza -a'
+alias vim=nvim
 
 # History
 HISTSIZE=5000

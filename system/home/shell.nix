@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     imports = [
@@ -44,7 +44,7 @@
             share = true;
             ignoreSpace = true; # Ignore commands that start with a space
             extended = true;
-            ignorePatterns = [ "ls" "cd" "pwd" "ls *" "cd *" "pwd *" ]; # Ignore frequent/redundant commands
+            ignorePatterns = [ "ls *" "cd *" "pwd *" ]; # Ignore frequent/redundant commands
 
             # Ignore duplicate commands
             ignoreDups = true;

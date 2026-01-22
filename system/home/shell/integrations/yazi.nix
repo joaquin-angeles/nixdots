@@ -11,11 +11,11 @@
         theme = {
             filetype = {
                 rules = [
-                    { mime = "inode/directory"; fg = "blue"; bold = true; }
+                    { mime = "inode/directory"; fg = "yellow"; }
                     { name = "*"; is = "orphan"; fg = "red"; }
-                    { name = "*"; is = "link"; fg = "cyan"; }
+                    { name = "*"; is = "link"; fg = "blue"; }
                     { name = "*/"; is = "orphan"; fg = "red"; }
-                    { name = "*/"; is = "link"; fg = "cyan"; }
+                    { name = "*/"; is = "link"; fg = "blue"; }
                 ];
             };
         };

@@ -1,11 +1,11 @@
 layer=overlay
-margin=6,6,6,12
+padding=8
+margin=6
 width=500
 height=125
 default-timeout=3000
 text-color=#d4be98
 background-color=#1d2021
-border-color=#494235
+border-color=#2d3031
 border-radius=5
-text-alignment=center
-font=JetBrainsMono Nerd Font Propo 12
+font=sans-serif 14

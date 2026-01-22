@@ -1,4 +1,18 @@
 return {
+
+    -- blink.cmp
+    { import = "nvchad.blink.lazyspec" },
+
+    -- Disable telescope
+    -- { "nvim-telescope/telescope.nvim", enabled = false },
+
+    -- Fzf integratiion into telescope
+    {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+        lazy = false,
+    },
+
     {
         "stevearc/conform.nvim",
         -- event = 'BufWritePre', -- uncomment for format on save
@@ -15,10 +29,4 @@ return {
 
     -- Undo history
     { "mbbill/undotree", lazy = false, },
-
-    -- Fzf integratiion into telescope
-    {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install'
-    },
 }
