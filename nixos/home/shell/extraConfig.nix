@@ -22,7 +22,7 @@
                 # Cursor and title configuration
                 autoload -Uz add-zsh-hook
                 add-zsh-hook precmd () {
-                    printf '\e[1 q'
+                    printf '\e[6 q'
                     print -Pn "\e]0;%n@%m: %~\a"
                 }
 
