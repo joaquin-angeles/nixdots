@@ -26,7 +26,6 @@
         sunsetr
         swayosd
         unstable.impala
-        unstable.neovim
         unstable.wiremix
         waybar
         wbg

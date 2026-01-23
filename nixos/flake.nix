@@ -3,58 +3,62 @@
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; # Stable nixpkgs
-        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
-        unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Rolling nixpkgs
+            nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest"; # Flatpaks
+            unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; # Rolling nixpkgs
 
-        # Home manager
-        home-manager = {
-            url = "github:nix-community/home-manager/release-25.11";
+# Home manager
+            home-manager = {
+                url = "github:nix-community/home-manager/release-25.11";
+                inputs.nixpkgs.follows = "nixpkgs";
+            };
+        nix4nvchad = {
+            url = "github:nix-community/nix4nvchad";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    # Main integrations
+# Main integrations
     outputs = inputs@{ self, nixpkgs, nix-flatpak, unstable, home-manager, ... }: {
-        # Imported configurations
+# Imported configurations
         nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
-                # System configuration
+# System configuration
                 /etc/nixos/hardware-configuration.nix
-                ./configuration.nix
+                    ./configuration.nix
 
-                # Program configs
-                ./core/apps.nix
-                ./core/hardware.nix
-                ./core/services.nix
+# Program configs
+                    ./core/apps.nix
+                    ./core/hardware.nix
+                    ./core/services.nix
 
-                # User configuration
-                home-manager.nixosModules.home-manager
-                {
-                    nixpkgs.config.allowUnfree = true; # Allow proprietary
-                    home-manager = {
-                        backupFileExtension = "bak"; # Fallback for existing files
-                        users.user = import ./home.nix; # Main configuration file
-                        useGlobalPkgs = true; # Merge into packages
-                        useUserPackages = true; # Utilize per-user package installation
-                        extraSpecialArgs = { inherit inputs; }; # Accept inputs 
-                        sharedModules = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
-                    };
-                }
-
-                # Package overlays
-                {
-                    nixpkgs.overlays = [
-                        (final: prev: {
-                            # Overlay the unstable input
-                            unstable = import inputs.unstable {
-                                inherit (prev.stdenv.hostPlatform) system;
-                                config = prev.config;
+# User configuration
+                    home-manager.nixosModules.home-manager
+                    {
+                        nixpkgs.config.allowUnfree = true; # Allow proprietary
+                            home-manager = {
+                                backupFileExtension = "bak"; # Fallback for existing files
+                                    users.user = import ./home.nix; # Main configuration file
+                                    useGlobalPkgs = true; # Merge into packages
+                                    useUserPackages = true; # Utilize per-user package installation
+                                    extraSpecialArgs = { inherit inputs; }; # Accept inputs 
+                                    sharedModules = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
                             };
-                        })
-                    ];
-                }
+                    }
+
+# Package overlays
+            {
+                nixpkgs.overlays = [
+                    (final: prev: {
+# Overlay the unstable input
+                     unstable = import inputs.unstable {
+                     inherit (prev.stdenv.hostPlatform) system;
+                     config = prev.config;
+                     };
+                     })
+                ];
+            }
             ];
         };
     };
