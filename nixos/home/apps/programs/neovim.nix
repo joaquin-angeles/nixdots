@@ -3,7 +3,7 @@
 {
     programs.neovim = {
         enable = true;
-        package = unstable.neovim-unwrapped;
+        package = pkgs.unstable.neovim-unwrapped;
         defaultEditor = true;
         viAlias = true;
 
