@@ -11,24 +11,13 @@
         theme = {
             filetype = {
                 rules = [
-                    { mime = "inode/directory"; fg = "yellow"; }
+                    { mime = "inode/directory"; fg = "blue"; bold = true; }
                     { name = "*"; is = "orphan"; fg = "red"; }
-                    { name = "*"; is = "link"; fg = "blue"; }
+                    { name = "*"; is = "link"; fg = "cyan"; }
                     { name = "*/"; is = "orphan"; fg = "red"; }
-                    { name = "*/"; is = "link"; fg = "blue"; }
+                    { name = "*/"; is = "link"; fg = "cyan"; }
                 ];
             };
-        };
-
-        # Keybindings
-        keymap = {
-            mgr.prepend_keymap = [
-                {
-                    on = "c";
-                    run = "cancel_cut_copy";
-                    desc = "Cancel Cut/Copy";
-                }
-            ];
         };
 
         # Settings

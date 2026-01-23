@@ -7,9 +7,7 @@
         fzf = "ff";
         grep = "rg";
         ls = "eza";
-        vim = "nvim";
         yazi = "yy";
-        yz = "yy";
         zlj = "zellij";
     };
 }

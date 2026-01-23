@@ -8,7 +8,7 @@ require("yatline"):setup({
     inverse_separator = { open = "", close = "" },
 
     style_a = {
-        fg = "green",
+        fg = "white",
         bg_mode = {
             normal = nil,
             select = nil,
@@ -58,11 +58,8 @@ require("yatline"):setup({
 
     header_line = {
         left = {
-            section_a = {
-                {type = "coloreds", custom = true, name = {{"user@nixos-btw", "green"}, {":", "white"}}},
-            },
-            section_b = {
-            },
+            section_a = { },
+            section_b = { },
             section_c = {
                 {type = "string", custom = false, name = "hovered_path"},
             }
@@ -81,25 +78,21 @@ require("yatline"):setup({
     status_line = {
         left = {
             section_a = {
-                {type = "string", custom = false, name = "tab_mode"},
                 {type = "coloreds", custom = false, name = "permissions"},
             },
             section_b = {
                 {type = "string", custom = false, name = "hovered_ownership"},
-                {type = "string", custom = false, name = "hovered_size"},
             },
             section_c = {
-                {type = "string", custom = false, name = "hovered_file_extension"},
+                {type = "string", custom = false, name = "hovered_size"},
             }
         },
         right = {
-            section_a = {
-            },
+            section_a = {},
             section_b = {
                 {type = "string", custom = false, name = "cursor_position"},
             },
-            section_c = {
-            }
+            section_c = {}
         }
     },
 })
