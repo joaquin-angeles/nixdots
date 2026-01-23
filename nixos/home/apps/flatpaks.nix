@@ -56,6 +56,8 @@
             # File access
             Context.filesystems = [
                 "/nix/store:ro"
+                "~/.local/share/icons" # Access to themes
+                "~/.local/share/applications" # Access to themes
                 "~/.local/share/fonts:ro" # Access to fonts
                 "~/.local/share/themes:ro" # Access to themes
 
