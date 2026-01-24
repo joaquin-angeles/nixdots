@@ -9,8 +9,6 @@
         ./apps/scripts.nix
     ];
 
-    programs.nh.enable = true; # NH
-
     # Default applications
     xdg.enable = true;
     xdg.mimeApps = {

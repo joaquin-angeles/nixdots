@@ -14,5 +14,5 @@
             title_format = "user@nixos-btw: {cwd}";
             show_symlink = true;
         };
-    }
+    };
 }

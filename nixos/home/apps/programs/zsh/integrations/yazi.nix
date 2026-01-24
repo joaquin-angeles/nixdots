@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     imports = [
@@ -13,8 +13,6 @@
         enable = true;
         enableZshIntegration = true; # Shell integration
 
-        ./yazi/init.lua; # Plugin configuration
-        
         # Previewers
         extraPackages = with pkgs; [
             ffmpegthumbnailer
