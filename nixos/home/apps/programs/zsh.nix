@@ -2,19 +2,19 @@
 
 {
     imports = [
-        ./shell/aliases.nix
-        ./shell/extraConfig.nix # Functions
-        # ./shell/binds.nix # Keybinds
+        ./zsh/aliases.nix
+        ./zsh/extraConfig.nix # Functions
+        # ./zsh/binds.nix # Keybinds
 
-        # Shell integrations
-        ./shell/integrations/bat.nix     # Better cat
-        ./shell/integrations/eza.nix     # Better ls
-        ./shell/integrations/fd.nix      # Better find
-        ./shell/integrations/fzf.nix     # Fuzzy finger
-        ./shell/integrations/nom.nix     # Better Nix outputs
-        ./shell/integrations/ripgrep.nix # Better grep
-        ./shell/integrations/yazi.nix    # File manager
-        ./shell/integrations/zoxide.nix  # Better cd
+        # zsh integrations
+        ./zsh/integrations/bat.nix     # Better cat
+        ./zsh/integrations/eza.nix     # Better ls
+        ./zsh/integrations/fd.nix      # Better find
+        ./zsh/integrations/fzf.nix     # Fuzzy finger
+        ./zsh/integrations/nom.nix     # Better Nix outputs
+        ./zsh/integrations/ripgrep.nix # Better grep
+        ./zsh/integrations/yazi.nix    # File manager
+        ./zsh/integrations/zoxide.nix  # Better cd
     ];
 
     # Base zsh configuration

@@ -19,7 +19,7 @@
         ./home/apps.nix # Packages
         ./home/apps/theme.nix # Theming
 
-        ./home/shell.nix # Shell configuration (zsh)
+        ./home/apps/programs/zsh.nix
     ];
 
     # User directories
