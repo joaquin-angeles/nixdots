@@ -1,25 +1,11 @@
 return {
-
-    -- blink.cmp
-    { import = "nvchad.blink.lazyspec" },
-
-    -- Disable telescope
-    -- { "nvim-telescope/telescope.nvim", enabled = false },
-
-    -- Fzf integratiion into telescope
-    {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make',
-        lazy = false,
-    },
-
     {
         "stevearc/conform.nvim",
         -- event = 'BufWritePre', -- uncomment for format on save
         opts = require "configs.conform",
     },
 
-    -- LSP repositories for Mason
+    -- These are some examples, uncomment them if you want to see them work!
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -27,6 +13,18 @@ return {
         end,
     },
 
-    -- Undo history
-    { "mbbill/undotree", lazy = false, },
+    -- test new blink
+    -- { import = "nvchad.blink.lazyspec" },
+
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                "vim", "lua", "vimdoc",
+                "html", "css", "nix",
+                "bash", "hyprlang", "json",
+                "jsonc", "toml", "yaml",
+            },
+        },
+    },
 }
