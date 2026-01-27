@@ -59,7 +59,7 @@
 
 # User configuration
     users.users.user = {
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "wheel" "input" ];
         isNormalUser = true;
         shell = pkgs.zsh;
     };

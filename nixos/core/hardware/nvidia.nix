@@ -10,7 +10,7 @@
         modesetting.enable = true;
         powerManagement.finegrained = true;
         open = false;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
+        package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
 
     # Offloading

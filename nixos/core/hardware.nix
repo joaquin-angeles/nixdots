@@ -6,6 +6,10 @@
         ./hardware/laptop.nix # Laptop configurations
         ./hardware/nvidia.nix # Proprietary Nvidia drivers
     ];
+    services.udev.extraRules = ''
+        KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="108c", MODE="0666", TAG+="uaccess"
+        SUBSYSTEM=="usb", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="108c", MODE="0666", TAG+="uaccess"
+    '';
 
     # Audio server configuration
     security.rtkit.enable = true;

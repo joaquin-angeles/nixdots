@@ -1,6 +1,19 @@
 { inputs, config, pkgs,  ... }:
 
 {
+
+    # Theme packages
+    home.packages = with pkgs; [
+        adw-gtk3
+        kdePackages.qt6ct
+        kdePackages.qtstyleplugin-kvantum
+        lazygit
+        libnotify
+        libsForQt5.qt5ct
+        libsForQt5.qtstyleplugin-kvantum
+        nwg-look
+    ];
+     
     # Cursor theming
     home.pointerCursor = {
         gtk.enable = true;
