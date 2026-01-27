@@ -8,6 +8,7 @@
         gtk3
         gtk4
         polkit_gnome
+        usbutils
         wl-clipboard
         zenity
     ];

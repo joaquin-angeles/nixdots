@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-    import = [ ./media.nix ];
+    imports = [ ./media.nix ];
 
     # User packages
     home.packages = with pkgs; [
