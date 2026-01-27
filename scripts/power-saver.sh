@@ -25,13 +25,11 @@ new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
 if [ "$new_state" != "$current_state" ]; then
     current_state="$new_state"
     if [ "$new_state" = "discharging" ]; then
-        brightnessctl set 40%
         brightnessctl --device="$KBD_DEVICE" set 0
         hyprctl keyword monitor $MONITOR,1920x1080@60,auto,1.0
         hyprctl keyword decoration:blur:enabled 0
         hyprctl keyword decoration:shadow:enabled 0
     else
-        brightnessctl set 50%
         brightnessctl --device="$KBD_DEVICE" set 100%
         hyprctl keyword monitor $MONITOR,1920x1080@120,auto,1.0
         hyprctl keyword decoration:blur:enabled 1

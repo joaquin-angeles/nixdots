@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./programs/alacritty.nix
+        ./programs/alacritty/app.nix
         ./programs/btop.nix
         ./programs/neovim.nix
         ./programs/lutris.nix

@@ -2,8 +2,6 @@
 
 {
     programs.alacritty = {
-        enable = true;
-
         # Config / alacritty.toml
         settings = {
 
@@ -15,16 +13,6 @@
                     y = 10;
                 };
                 dynamic_padding = true;
-            };
-
-            # Fonts' config
-            # monospace = JBM NF Mono, btw
-            font.size = 13.5;
-
-            # Environment variables
-            env = {
-                TERM = "xterm-256color";
-                FZF_DEFAULT_OPTS = "--color=bg:,bg+:#4d5051,fg:#d4be98,fg+:#d4be98,hl:#a9b665,hl+:#a9b665,info:#7daea3,prompt:#d3869b,pointer:#a9b665,marker:#ea6962,spinner:#d8a657,header:#89b482,border:#4d5051"; # fzf theming
             };
 
             # Color scheme (Gruvbox material)
@@ -45,7 +33,7 @@
             };
 
             colors.bright = {
-                black   = "#4d5051";
+                black   = "#3f4243";
                 red     = "#ef8e89";
                 green   = "#bec88c";
                 yellow  = "#e2bc81";
