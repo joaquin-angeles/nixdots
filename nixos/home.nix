@@ -18,8 +18,6 @@
         # Apps
         ./home/apps.nix # Packages
         ./home/apps/theme.nix # Theming
-
-        ./home/apps/programs/zsh/package.nix # Zsh config
     ];
 
     # User directories

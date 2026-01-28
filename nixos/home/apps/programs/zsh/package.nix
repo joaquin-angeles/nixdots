@@ -2,10 +2,10 @@
 
 {
     imports = [
+        ./aliases.nix
         ./config/init.nix
         ./config/history.nix
         ./config/plugins.nix
-        # ./zsh/binds.nix # Keybinds
 
         # zsh integrations
         ./integrations/bat.nix          # Better cat

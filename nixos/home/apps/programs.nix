@@ -2,13 +2,14 @@
 
 {
     imports = [
-        ./programs/alacritty/package.nix
-        ./programs/btop.nix
-        ./programs/neovim.nix
-        ./programs/lutris.nix
-        ./programs/rofi.nix
+        ./programs/alacritty/package.nix # Terminal
+        ./programs/btop.nix              # System monitor
+        ./programs/neovim.nix            # Text editor
+        ./programs/lutris.nix            # Game launcher
+        ./programs/rofi.nix              # App launcher
+        ./programs/zsh/package.nix       # Shell configuration
     ];
 
     programs.home-manager.enable = true; # Home Manager
-    programs.nh.enable = true; # NH
+    programs.nh.enable = true;           # Nix helper
 }

@@ -12,18 +12,18 @@
 
         # Installed flatpaks
         packages = [
-            "app.zen_browser.zen" # Default browser
+            "app.zen_browser.zen"         # Default browser
             # "com.github.tchx84.Flatseal"
-            "com.obsproject.Studio" # Screen recording software
-            # "com.usebottles.bottles" # Windows applications
-            "com.vysp3r.ProtonPlus" # Games compat tool
-            "com.spotify.Client" # Music streaming
-            "dev.vencord.Vesktop" # Discord / Communication
-            "io.mrarm.mcpelauncher" # Minecraft
-            "org.chromium.Chromium" # Progressive web apps
+            "com.obsproject.Studio"       # Screen recording software
+            # "com.usebottles.bottles"    # Windows applications
+            "com.vysp3r.ProtonPlus"       # Games compatibility tool
+            "com.spotify.Client"          # Music streaming
+            "dev.vencord.Vesktop"         # Discord
+            "io.mrarm.mcpelauncher"       # Minecraft: Bedrock Edition
+            "org.chromium.Chromium"       # Progressive web apps
             "org.libreoffice.LibreOffice" # Office suite
-            "org.gimp.GIMP" # Photo editing
-            "org.vinegarhq.Sober" # Roblox
+            "org.gimp.GIMP"               # Photo editing software
+            "org.vinegarhq.Sober"         # Roblox
         ];
 
         uninstallUnmanaged = true; # True declarative
