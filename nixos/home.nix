@@ -2,8 +2,8 @@
 
 {
     # User configuration
-    home.username = "user";
-    home.homeDirectory = "/home/user";
+    home.username = "joaquin";
+    home.homeDirectory = "/home/joaquin";
     home.stateVersion = "25.05";
 
     # System correction
@@ -19,7 +19,7 @@
         ./home/apps.nix # Packages
         ./home/apps/theme.nix # Theming
 
-        ./home/apps/programs/zsh.nix
+        ./home/apps/programs/zsh/package.nix # Zsh config
     ];
 
     # User directories

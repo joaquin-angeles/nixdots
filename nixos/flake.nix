@@ -34,10 +34,10 @@
                 {
                     nixpkgs.config.allowUnfree = true; # Allow proprietary
                     home-manager = {
-                        backupFileExtension = "bak"; # Fallback for existing files
-                        users.user = import ./home.nix; # Main configuration file
-                        useGlobalPkgs = true; # Merge into packages
-                        useUserPackages = true; # Utilize per-user package installation
+                        backupFileExtension = "bak";            # Fallback for existing files
+                        users.joaquin = import ./home.nix;      # Main configuration file
+                        useGlobalPkgs = true;                   # Merge into packages
+                        useUserPackages = true;                 # Utilize per-user package installation
                         extraSpecialArgs = { inherit inputs; }; # Accept inputs 
                         sharedModules = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
                     };
